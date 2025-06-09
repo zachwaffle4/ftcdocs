@@ -30,7 +30,7 @@ and :doc:`gracious_professionalism/gp` to see why.
    persona_pages/veteran_teams/veteran_teams
    persona_pages/coach_admin/coach_admin
    persona_pages/mentor_tech/mentor_tech
-   
+
 .. toctree::
    :caption: Game and Season-Specific Resources
    :maxdepth: 1
@@ -68,6 +68,17 @@ and :doc:`gracious_professionalism/gp` to see why.
    control_hard_compon/index
    hardware_and_software_configuration/index
    hardware_and_software_configuration/self_inspect/self-inspect
+
+.. toctree::
+   :caption: Programming Resources
+   :maxdepth: 1
+   :hidden:
+
+   programming_resources/shared/choosing_program_lang/choosing-program-lang
+   programming_resources/shared/control_system_intro/The-FTC-Control-System
+   programming_resources/vision/vision_overview/vision-overview
+   color_processing/index
+   programming_resources/shared/pidn_coefficients/pid-coefficients
    programming_resources/index
 
 .. toctree::
@@ -102,12 +113,12 @@ and :doc:`gracious_professionalism/gp` to see why.
    :hidden:
 
    Manufacturing Methods <manufacturing/index>
-   
+
 .. toctree::
    :caption: Team Resources
    :maxdepth: 1
    :hidden:    
-   
+
    faq/faqs
    Team Complimentary Software<sponsors/software/software>
    Team Discounts<sponsors/discounts/discounts>
@@ -119,6 +130,7 @@ and :doc:`gracious_professionalism/gp` to see why.
 
    Booklets<booklets/index>
    Archive <https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html>
+   TensorFlow Archive<archive/index>
    Site Feedback Form<ftc_docs/form/form>
    Contributing to FTC Docs<contrib/index>
 
@@ -144,7 +156,7 @@ The main menu contains links to the top level content. The following are quick l
       :class-body: sd-text-left 
 
       Programming Links
-   
+
       ^^^
 
       Quick Links for Programming Language Resources 
@@ -162,7 +174,7 @@ The main menu contains links to the top level content. The following are quick l
                :expand:
 
                Blocks
-      
+
          .. div:: col-sm pl-1 pr-1
 
             .. button-ref:: programming_resources/onbot_java/OnBot-Java-Tutorial
@@ -172,9 +184,9 @@ The main menu contains links to the top level content. The following are quick l
                :expand:
 
                OnBot Java
-         
+
          .. div:: col-sm pl-1 pr-1
- 
+
             .. button-ref:: programming_resources/android_studio_java/Android-Studio-Tutorial
                :ref-type: doc
                :color: black
@@ -194,7 +206,7 @@ The main menu contains links to the top level content. The following are quick l
                AprilTags
 
          .. div:: col-sm pl-1 pr-1
- 
+
             .. button-ref:: programming_resources/index
                :ref-type: doc
                :color: black
@@ -208,7 +220,7 @@ The main menu contains links to the top level content. The following are quick l
       :class-body: sd-text-left 
 
       Control System Links
-   
+
       ^^^
 
       Let's get to know the *FIRST* Tech Challenge Control System! 
@@ -218,7 +230,7 @@ The main menu contains links to the top level content. The following are quick l
       .. div:: container-fluid p-0
 
          .. div:: col-sm pl-1 pr-1
-      
+
             .. button-ref:: control_hard_compon/ds_components/index
                :ref-type: doc
                :color: black
@@ -228,7 +240,7 @@ The main menu contains links to the top level content. The following are quick l
                Driver Station
 
          .. div:: col-sm pl-1 pr-1
-      
+
             .. button-ref:: control_hard_compon/rc_components/index
                :ref-type: doc
                :color: black
@@ -238,7 +250,7 @@ The main menu contains links to the top level content. The following are quick l
                Robot Controller
 
          .. div:: col-sm pl-1 pr-1
-      
+
             .. button-ref:: hardware_and_software_configuration/connecting_devices/index
                :ref-type: doc
                :color: black
@@ -262,14 +274,14 @@ The main menu contains links to the top level content. The following are quick l
       :class-body: sd-text-left 
 
       Software Development Kit (SDK)
-   
+
       ^^^
 
       The Software Development Kit (SDK) is the collection of tools for
       developing software and executing it on the robot. 
 
       +++
- 
+
       .. div:: container-fluid p-0
 
          .. div:: col-sm pl-1 pr-1
@@ -283,7 +295,7 @@ The main menu contains links to the top level content. The following are quick l
                About the SDK
 
          .. div:: col-sm pl-1 pr-1
-      
+
             .. button-link:: https://github.com/FIRST-Tech-Challenge/FtcRobotController/              
                :ref-type: doc
                :color: black
@@ -293,7 +305,7 @@ The main menu contains links to the top level content. The following are quick l
                SDK GitHub Repository (external)
 
          .. div:: col-sm pl-1 pr-1
-      
+
             .. button-link:: https://github.com/FIRST-Tech-Challenge/FtcRobotController/releases               
                :color: black
                :outline:
@@ -315,18 +327,18 @@ The main menu contains links to the top level content. The following are quick l
       :class-body: sd-text-left 
 
       Game Links
-   
+
       ^^^
 
       Be sure you're following all of the rules of the competition! 
       The Competition Manual is an essential document.
 
       +++
- 
+
       .. div:: container-fluid p-0
 
          .. div:: col-sm pl-1 pr-1
-      
+
             .. button-ref:: manuals/game_manuals/game_manuals
                :ref-type: doc
                :color: black
@@ -336,7 +348,7 @@ The main menu contains links to the top level content. The following are quick l
                Competition Manual
 
          .. div:: col-sm pl-1 pr-1
-      
+
             .. button-ref:: game_specific_resources/playing_field_resources/playing_field_resources
                :ref-type: doc
                :color: black
@@ -359,4 +371,3 @@ The main menu contains links to the top level content. The following are quick l
    teams and in some way provide context to game rules, the game rules supercede 
    all documentation found here. If you have feedback about this project, 
    please use our :doc:`feedback form <ftc_docs/form/form>`.
-
