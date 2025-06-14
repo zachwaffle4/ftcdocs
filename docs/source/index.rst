@@ -58,7 +58,6 @@ and :doc:`gracious_professionalism/gp` to see why.
    :maxdepth: 1
    :hidden:
 
-
 .. toctree::
    :caption: Control System Resources
    :maxdepth: 1
@@ -69,6 +68,17 @@ and :doc:`gracious_professionalism/gp` to see why.
    hardware_and_software_configuration/index
    hardware_and_software_configuration/self_inspect/self-inspect
    programming_resources/index
+
+.. toctree::
+   :caption: Programming Tutorials
+   :maxdepth: 1
+   :titlesonly:
+   :hidden:
+
+   programming_resources/shared/choosing_program_lang/choosing-program-lang
+   programming_resources/blocks/Blocks-Tutorial
+   programming_resources/onbot_java/OnBot-Java-Tutorial
+   programming_resources/android_studio_java/Android-Studio-Tutorial
 
 .. toctree::
    :caption: AprilTag Resources

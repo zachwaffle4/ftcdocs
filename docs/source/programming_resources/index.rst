@@ -20,18 +20,6 @@ Programming Tutorials
 -  :doc:`Onbot Java Tutorial <onbot_java/OnBot-Java-Tutorial>`
 -  :doc:`Android Studio Tutorial <android_studio_java/Android-Studio-Tutorial>`
 
-.. toctree::
-   :caption: Tutorials
-   :maxdepth: 1
-   :titlesonly:
-   :hidden:
-
-   shared/choosing_program_lang/choosing-program-lang
-   blocks/Blocks-Tutorial
-   onbot_java/OnBot-Java-Tutorial
-   android_studio_java/Android-Studio-Tutorial
-
-
 Supporting Documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
