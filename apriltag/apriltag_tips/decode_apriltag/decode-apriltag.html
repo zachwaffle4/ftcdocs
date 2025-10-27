@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AprilTag Challenges in DECODE presented by RTX &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/hoverxref.js"></script>
+        <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../../_static/js/micromodal.min.js"></script>
+        <script src="../../../_static/js/external-links-new-tab.js"></script>
+        <script src="../../../_static/js/adjust-css-vars.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../../_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="TensorFlow for CENTERSTAGE presented by RTX" href="../../../programming_resources/vision/tensorflow_cs_2023/tensorflow-cs-2023.html" />
+    <link rel="prev" title="FIRST Tech Challenge AprilTag Testing Samples" href="../../opmode_test_images/opmode-test-images.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <!-- Color Strip -->
+        <div class="color-strip">
+            <div class="fred"></div>
+            <div class="forange"></div>
+            <div class="fblue"></div>
+        </div>
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>          
+			<li id="ftc-page-link"><a href="https://www.firstinspires.org/resource-library/ftc/game-and-season-info" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            FIRST Tech Challenge Docs
+              <img src="../../../_static/FIRSTTech_iconHorz_RGB_reverse.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../programming_resources/index.html">Programming Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#programming-tutorials">Programming Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#supporting-documentation">Supporting Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../programming_resources/index.html#apriltag-programming">AprilTag Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vision_portal/visionportal_webcams/visionportal-webcams.html">Webcams for VisionPortal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vision_portal/apriltag_localization/apriltag-localization.html">AprilTag Localization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">AprilTag Challenges in DECODE presented by RTX</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-are-apriltags">What are AprilTags?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#apriltags-with-difficult-environmental-lighting">AprilTags with Difficult Environmental Lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reading-multiple-apriltags-on-the-obelisk">Reading Multiple AprilTags on the OBELISK</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#tensorflow-programming">TensorFlow Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#vision-programming">Vision Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#camera-color-processing">Camera Color Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#advanced-topics">Advanced Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#java-tutorials">Java Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#additional-first-website-resources">Additional <em>FIRST</em> Website Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programming Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/shared/choosing_program_lang/choosing-program-lang.html">Choosing a Programming Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/blocks/Blocks-Tutorial.html">Blocks Programming Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/onbot_java/OnBot-Java-Tutorial.html">OnBot Java Programming Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/android_studio_java/Android-Studio-Tutorial.html">Android Studio Programming Tutorial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">AprilTag Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vision_portal/visionportal_webcams/visionportal-webcams.html">Webcams for VisionPortal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vision_portal/apriltag_localization/apriltag-localization.html">AprilTag Localization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Electrostatic Discharge</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../programming_resources/index.html">Programming Resources</a></li>
+      <li class="breadcrumb-item active">AprilTag Challenges in DECODE presented by RTX</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/apriltag/apriltag_tips/decode_apriltag/decode-apriltag.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="apriltag-challenges-in-decode-presented-by-rtx">
+<h1>AprilTag Challenges in DECODE presented by RTX<a class="headerlink" href="#apriltag-challenges-in-decode-presented-by-rtx" title="Permalink to this heading"></a></h1>
+<section id="what-are-apriltags">
+<h2>What are AprilTags?<a class="headerlink" href="#what-are-apriltags" title="Permalink to this heading"></a></h2>
+<p>Developed at the <a class="reference external" href="https://april.eecs.umich.edu/software/apriltag">University of Michigan</a>, AprilTags are similar to a
+2D barcode or a simplified QR Code. It contains a numeric <strong>ID code</strong> and can
+be used for <strong>location and orientation</strong>.</p>
+<p>In <em>FIRST</em> Tech Challenge during the DECODE presented by RTX season, AprilTags
+are used in three different ways:</p>
+<ol class="arabic simple">
+<li><p>On the OBELISK, the AprilTags are used to identify one of three MOTIFS that
+are randomized each MATCH.</p></li>
+<li><p>On the GOALS, AprilTags can be used to target the GOAL for teams to launch
+ARTIFACTS accurately into the correct GOAL.</p></li>
+<li><p>On the GOALS, AprilTags can be used as a visual odometry system, using the
+information that AprilTags can provide to calculate the position of the
+ROBOT on the FIELD (through a process called localization). See the
+<a class="reference internal" href="../../vision_portal/apriltag_localization/apriltag-localization.html"><span class="doc">AprilTag Localization</span></a>
+page for more information.</p></li>
+</ol>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/decode-apriltags.png"><img alt="Image showing the DECODE field and AprilTag locations" src="../../../_images/decode-apriltags.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-text">AprilTag IDs and Locations on the DECODE field.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="apriltags-with-difficult-environmental-lighting">
+<h2>AprilTags with Difficult Environmental Lighting<a class="headerlink" href="#apriltags-with-difficult-environmental-lighting" title="Permalink to this heading"></a></h2>
+<p>One of the challenges teams will face this season is ensuring that their cameras
+are able to see the AprilTags correctly. AprilTags rely on the fact that the
+white and black portions of the AprilTags are contrasting colors - if the lighting
+in the environment doesn’t allow for enough contrast, the AprilTag algorithm
+may not properly detect the AprilTag. Fortunately, there are things we can do
+with virtually every webcam that can help correct for environmental issues.</p>
+<p>An excellent example situation came up in a warehouse. The DECODE field was set
+up in the warehouse, and using default settings with the
+<code class="docutils literal notranslate"><span class="pre">ConceptAprilTagEasy</span></code> sample.  When viewing the camera stream preview, the
+AprilTag on the OBELISK was completely washed out by sunlight striking the
+OBELISK directly on a sunny day, making the AprilTag unable to be seen. A
+different camera at a slightly different angle took another picture of the same
+scene, and the AprilTag can be seen but there is definitely too much direct light
+reflecting off the AprilTag, making it unable to be recognized. This scenario is
+very similar to a gymnasium where an event could be hosted, and on a sunny day
+light can interfere with a camera’s ability to view an AprilTag. What can be done?</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-3 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Image #1 - Example</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/1-decode-washed-out-obelisk.png"><img alt="Image of DECODE field with obelisk AprilTag unable to be seen" src="../../../_images/1-decode-washed-out-obelisk.png" style="width: 95%;" /></a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Washed Out AprilTag on OBELISK</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Image #2 - Alternate View</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/2-decode-washed-out-obelisk.png"><img alt="Image of DECODE field from another perspective" src="../../../_images/2-decode-washed-out-obelisk.png" style="width: 85%;" /></a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Alternate View of OBELISK</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Image #3 - Alternate View</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/5-decode-warehouse-lighting.png"><img alt="Image showing light coming in from windows of warehouse" src="../../../_images/5-decode-warehouse-lighting.png" style="width: 85%;" /></a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Sunlight Entering Warehouse</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The best way to counter this environmental lighting is to use the webcam
+settings within the SDK to adjust both the Gain and the Exposure settings at
+the same time. By simultaneously minimizing the exposure (lessening the amount of
+time light is allowed to strike the sensor each image frame) and maximizing
+the gain (amplifying the signal from the sensor) the resulting image will be
+darker than a normal image but elements of high contrast will be accentuated,
+like AprilTags, allowing them to be recognized. This can be experimented with
+using the <code class="docutils literal notranslate"><span class="pre">ConceptAprilTagOptimizeExposure</span></code> sample.</p>
+<p>Sure enough, by minimizing the Exposure and maximizing the Gain of the webcam,
+the resulting images from the webcam were able to be used to recognize the
+problematic AprilTags. For more examples, the <code class="docutils literal notranslate"><span class="pre">RobotAutoDriveToAprilTag...</span></code>
+sample OpModes also use this technique for adjusting the exposure and gain
+settings of the camera to ensure the AprilTags are readable under most
+conditions.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>One big advantage is that this technique (minimizing exposure while
+maximizing gain) is ALSO very popular in reducing motion blur for reading
+AprilTags while moving - so this has more than one benefit!</p>
+</div>
+<p>Here are examples of the images once the exposure and gain are set appropriately,
+one image has the AprilTag processing enabled to show that the AprilTag is
+being detected properly, and the other has processing disabled so that we can
+see the raw image being returned by the webcam.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Image #4 - Processed Image</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/3-decode-recognized-obelisk.png"><img alt="Image of DECODE field with obelisk AprilTag being processed" src="../../../_images/3-decode-recognized-obelisk.png" style="width: 95%;" /></a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Processed Image showing Detections</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header sd-bg-dark font-weight-bold sd-text-white docutils">
+<p class="sd-card-text">Image #5 - Raw Processed Image</p>
+</div>
+<div class="sd-card-body sd-text-left body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/4-decode-recognized-obelisk-raw.png"><img alt="Image of raw processed DECODE field" src="../../../_images/4-decode-recognized-obelisk-raw.png" style="width: 95%;" /></a>
+</figure>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Image without AprilTag processing</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="reading-multiple-apriltags-on-the-obelisk">
+<h2>Reading Multiple AprilTags on the OBELISK<a class="headerlink" href="#reading-multiple-apriltags-on-the-obelisk" title="Permalink to this heading"></a></h2>
+<p>The OBELISK is an equilateral triangular prism (we know, real obelisks have 4
+sides) which is positioned with 1 of the rectangular faces centered on the
+GOAL-side of the FIELD, just outside of the FIELD perimeter. When ROBOTS are
+set up on the field contacting their ALLIANCE’S GOAL, it is a very real
+possibility that the ROBOT’s camera will see and process multiple AprilTags.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It might seem logical to read both AprilTags and use those two tags to
+determine (and verify) which AprilTag is actually being seen. However, there
+is no defined order for AprilTags on an OBELISK, so this is not reliable.</p>
+</div>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../../_images/6-decode-obelisk-tags.png"><img alt="Image showing OBELISK with more than one AprilTag visible" src="../../../_images/6-decode-obelisk-tags.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-text">View of AprilTags on OBELISK from BLUE GOAL</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>A reliable way to determine which AprilTag is truly showing on the FIELD
+is to move the ROBOT into a position where the AprilTag on the front face of
+the OBELISK is the only tag that can be viewed.</p>
+<p>Good Luck this season!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../opmode_test_images/opmode-test-images.html" class="btn btn-neutral float-left" title="FIRST Tech Challenge AprilTag Testing Samples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../programming_resources/vision/tensorflow_cs_2023/tensorflow-cs-2023.html" class="btn btn-neutral float-right" title="TensorFlow for CENTERSTAGE presented by RTX" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a href="../../../tos/tos.html">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blocks Sample OpMode for TFOD &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/hoverxref.js"></script>
+        <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../../_static/js/micromodal.min.js"></script>
+        <script src="../../../_static/js/external-links-new-tab.js"></script>
+        <script src="../../../_static/js/adjust-css-vars.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../../_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Blocks Custom Model Sample OpMode for TFOD" href="../blocks_tfod_opmode_custom/blocks-tfod-opmode-custom.html" />
+    <link rel="prev" title="TensorFlow for FREIGHT FRENZY presented by Raytheon Technologies" href="../tensorflow_ff_2021/tensorflow-ff-2021.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <!-- Color Strip -->
+        <div class="color-strip">
+            <div class="fred"></div>
+            <div class="forange"></div>
+            <div class="fblue"></div>
+        </div>
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>          
+			<li id="ftc-page-link"><a href="https://www.firstinspires.org/resource-library/ftc/game-and-season-info" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            FIRST Tech Challenge Docs
+              <img src="../../../_static/FIRSTTech_iconHorz_RGB_reverse.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Programming Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#programming-tutorials">Programming Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#supporting-documentation">Supporting Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#apriltag-programming">AprilTag Programming</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#tensorflow-programming">TensorFlow Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../tensorflow_cs_2023/tensorflow-cs-2023.html">TensorFlow for CENTERSTAGE presented by RTX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tensorflow_pp_2022/tensorflow_pp_2022.html">TensorFlow for POWERPLAY presented by Raytheon Technologies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tensorflow_ff_2021/tensorflow-ff-2021.html">TensorFlow for FREIGHT FRENZY presented by Raytheon Technologies</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Blocks Sample OpMode for TFOD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-the-opmode">Creating the OpMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adjusting-the-zoom-factor">Adjusting the Zoom Factor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-adjustments">Other Adjustments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#command-flow-in-this-sample">Command Flow in this Sample</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#processing-tfod-recognitions">Processing TFOD Recognitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#testing-the-opmode">Testing the OpMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modifying-the-sample">Modifying the Sample</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blocks_tfod_opmode_custom/blocks-tfod-opmode-custom.html">Blocks Custom Model Sample OpMode for TFOD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../java_tfod_opmode/java-tfod-opmode.html">Java Easy Sample OpMode for TFOD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../java_tfod_opmode_custom/java-tfod-opmode-custom.html">Java Custom Model Sample OpMode for TFOD</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#vision-programming">Vision Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#camera-color-processing">Camera Color Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#advanced-topics">Advanced Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#java-tutorials">Java Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#additional-first-website-resources">Additional <em>FIRST</em> Website Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programming Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../shared/choosing_program_lang/choosing-program-lang.html">Choosing a Programming Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../blocks/Blocks-Tutorial.html">Blocks Programming Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../onbot_java/OnBot-Java-Tutorial.html">OnBot Java Programming Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../android_studio_java/Android-Studio-Tutorial.html">Android Studio Programming Tutorial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">AprilTag Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_webcams/visionportal-webcams.html">Webcams for VisionPortal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/apriltag_localization/apriltag-localization.html">AprilTag Localization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Electrostatic Discharge</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Programming Resources</a></li>
+      <li class="breadcrumb-item active">Blocks Sample OpMode for TFOD</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/programming_resources/vision/blocks_tfod_opmode/blocks-tfod-opmode.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="blocks-sample-opmode-for-tfod">
+<h1>Blocks Sample OpMode for TFOD<a class="headerlink" href="#blocks-sample-opmode-for-tfod" title="Permalink to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p>This tutorial describes the FTC Blocks Sample OpMode for TensorFlow
+Object Detection (TFOD). This Sample, called
+“ConceptTensorFlowObjectDetection”, can recognize one or more official
+game elements and provide their visible size and position.</p>
+<p>For the 2023-2024 game CENTERSTAGE, the game element is a hexagonal
+white <strong>Pixel</strong>. The FTC SDK software contains a TFOD model of this
+object, ready for recognition.</p>
+<p>For extra points, teams may instead use their own custom TFOD models of
+<strong>Team Props</strong>. That option is described here:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../blocks_tfod_opmode_custom/blocks-tfod-opmode-custom.html"><span class="doc">Blocks Custom Model Sample OpMode for TFOD</span></a></p></li>
+</ul>
+</section>
+<section id="creating-the-opmode">
+<h2>Creating the OpMode<a class="headerlink" href="#creating-the-opmode" title="Permalink to this heading"></a></h2>
+<p>At the FTC Blocks browser interface, click on the “Create New OpMode”
+button to display the Create New OpMode dialog box.</p>
+<p>Specify a name for your new OpMode. Select
+“ConceptTensorFlowObjectDetection” as the Sample OpMode that will be the
+template for your new OpMode.</p>
+<p>If no webcam is configured for your REV Control Hub, the dialog box will
+display a warning message (shown here). You can ignore this warning
+message if you will use the built-in camera of an Android RC phone.
+Click “OK” to create your new OpMode.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/030-Create-New-OpMode.png"><img alt="Creating a new OpMode" src="../../../_images/030-Create-New-OpMode.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-text">Creating a New OpMode</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The new OpMode should appear in edit mode in your browser.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/040-Sample-OpMode.png"><img alt="Sample OpMode" src="../../../_images/040-Sample-OpMode.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample OpMode</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>By default, the Sample OpMode assumes you are using a webcam, configured
+as “Webcam 1”. If you are using the built-in camera on your Android RC
+phone, change the USE_WEBCAM Boolean from <code class="docutils literal notranslate"><span class="pre">true</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code> (green
+arrow above).</p>
+</section>
+<section id="adjusting-the-zoom-factor">
+<h2>Adjusting the Zoom Factor<a class="headerlink" href="#adjusting-the-zoom-factor" title="Permalink to this heading"></a></h2>
+<p>If the object to be recognized will be more than roughly 2 feet (61 cm)
+from the camera, you might want to set the digital zoom factor to a
+value greater than 1. This tells TensorFlow to use an artificially
+magnified portion of the image, which may offer more accurate
+recognitions at greater distances.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/150-setZoom.png"><img alt="Setting Zoom" src="../../../_images/150-setZoom.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-text">Setting the Zoom Factor</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Pull out the <strong>``setZoom``</strong> Block, found in the toolbox or palette
+called “Vision”, under “TensorFlow” and “TfodProcessor” (see green oval
+above). Change the magnification value as desired (green arrow).</p>
+<p>On REV Control Hub, the “Vision” menu appears only when the active robot
+configuration contains a webcam, even if not plugged in.</p>
+<p>This <code class="docutils literal notranslate"><span class="pre">setZoom</span></code> Block can be placed in the INIT section of your OpMode,</p>
+<ul class="simple">
+<li><p>immediately after the call to the <code class="docutils literal notranslate"><span class="pre">initTfod</span></code> Function, or</p></li>
+<li><p>as the very last Block inside the <code class="docutils literal notranslate"><span class="pre">initTfod</span></code> Function.</p></li>
+</ul>
+<p>This Block is <strong>not</strong> part of the Processor Builder pattern, so the Zoom
+factor can be set to other values during the OpMode, if desired.</p>
+<p>The “zoomed” region can be observed in the DS preview (Camera Stream)
+and the RC preview (LiveView), surrounded by a greyed-out area that is
+<strong>not evaluated</strong> by the TFOD Processor.</p>
+</section>
+<section id="other-adjustments">
+<h2>Other Adjustments<a class="headerlink" href="#other-adjustments" title="Permalink to this heading"></a></h2>
+<p>The Sample OpMode uses a default <strong>minimum confidence</strong> level of 75%.
+The TensorFlow Processor needs to have a confidence level of 75% or
+higher, to consider an object as “recognized” in its field of view.</p>
+<p>You can see the object name and actual confidence (as a <strong>decimal</strong>,
+e.g. 0.75) near the Bounding Box, in the Driver Station preview (Camera
+Stream) and Robot Controller preview (Liveview).</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../../_images/160-min-confidence.png"><img alt="Setting Minimum Confidence" src="../../../_images/160-min-confidence.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-text">Setting the Minimum Confidence</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Pull out the <strong>``setMinResultConfidence``</strong> Block, found in the toolbox
+or palette called “Vision”, under “TensorFlow” and “TfodProcessor”.
+Adjust this parameter to a higher value if you would like the processor
+to be more selective in identifying an object.</p>
+<p>Another option is to define, or clip, a <strong>custom area for TFOD
+evaluation</strong>, unlike <code class="docutils literal notranslate"><span class="pre">setZoom</span></code> which is always centered.</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../../_images/170-clipping-margins.png"><img alt="Setting Clipping Margins" src="../../../_images/170-clipping-margins.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-text">Setting Clipping Margins</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>From the same Blocks palette, pull out the <strong>``setClippingMargins``</strong>
+Block. Adjust the four margins as desired, in units of pixels.</p>
+<p>These Blocks can be placed in the INIT section of your OpMode,</p>
+<ul class="simple">
+<li><p>immediately after the call to the <code class="docutils literal notranslate"><span class="pre">initTfod</span></code> Function, or</p></li>
+<li><p>as the very last Blocks inside the <code class="docutils literal notranslate"><span class="pre">initTfod</span></code> Function.</p></li>
+</ul>
+<p>As with <code class="docutils literal notranslate"><span class="pre">setZoom</span></code>, these Blocks are <strong>not</strong> part of the Processor
+Builder pattern, so they can be set to other values during the OpMode,
+if desired.</p>
+</section>
+<section id="command-flow-in-this-sample">
+<h2>Command Flow in this Sample<a class="headerlink" href="#command-flow-in-this-sample" title="Permalink to this heading"></a></h2>
+<p>After the <code class="docutils literal notranslate"><span class="pre">waitForStart</span></code> Block, this OpMode contains the main program
+loop:</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../../_images/180-main-loop.png"><img alt="Main Loop" src="../../../_images/180-main-loop.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-text">OpMode Main Loop</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>This loop repeatedly calls a Blocks Function called
+<strong>``telemetryTfod``</strong>. That Function is the heart of the OpMode, seeking
+and evaluating recognized TFOD objects, and displaying DS Telemetry
+about those objects. It will be discussed below, in the next section.</p>
+<p>The main loop also allows the user to press the <code class="docutils literal notranslate"><span class="pre">Dpad</span> <span class="pre">Down</span></code> button on
+the gamepad, to temporarily stop the streaming session. This
+<code class="docutils literal notranslate"><span class="pre">.stopStreaming</span></code> Block pauses the flow and processing of camera
+frames, thus <strong>conserving CPU resources</strong>.</p>
+<p>Pressing the <code class="docutils literal notranslate"><span class="pre">Dpad</span> <span class="pre">Up</span></code> button (<code class="docutils literal notranslate"><span class="pre">.resumeStreaming</span></code>) allows the
+processing to continue. The on-and-off actions can be observed in the RC
+preview (LiveView), described further below.</p>
+<p>These two commands appear here in this Sample OpMode, to spread
+awareness of one tool for managing CPU and bandwidth resources. The FTC
+VisionPortal offers over 10 such controls, <a class="reference internal" href="../../../apriltag/vision_portal/visionportal_cpu_and_bandwidth/visionportal-cpu-and-bandwidth.html#visionportal-cpu-and-bandwidth"><span class="std std-ref">described here</span></a>.</p>
+</section>
+<section id="processing-tfod-recognitions">
+<h2>Processing TFOD Recognitions<a class="headerlink" href="#processing-tfod-recognitions" title="Permalink to this heading"></a></h2>
+<p>The Function called <strong>``telemetryTfod``</strong> is the heart of the OpMode,
+seeking and evaluating recognized TFOD objects, and displaying DS
+Telemetry about those objects.</p>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../../_images/190-telemetryTfod.png"><img alt="Telemetry TFOD" src="../../../_images/190-telemetryTfod.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-text">Telemetry TFOD</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The first Block uses the TFOD Processor to gather and store all
+recognitions in a List, called <code class="docutils literal notranslate"><span class="pre">myTfodRecognitions</span></code>.</p>
+<p>The green “FOR Loop” iterates through that List, handling each item, one
+at a time. Here the “handling” is simply displaying certain TFOD fields
+to DS Telemetry.</p>
+<p>For competition, you want to do more than display Telemetry, and you
+want to exit the main loop at some point. These code modifications are
+discussed in another section below.</p>
+</section>
+<section id="testing-the-opmode">
+<h2>Testing the OpMode<a class="headerlink" href="#testing-the-opmode" title="Permalink to this heading"></a></h2>
+<p>Click the “Save OpMode” button, then run the OpMode from the Driver
+Station. The Robot Controller should use the CENTERSTAGE TFOD model to
+recognize and track the white Pixel.</p>
+<p>For a preview during the INIT phase, touch the Driver Station’s 3-dot
+menu and select <strong>Camera Stream</strong>.</p>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../../../_images/200-Sample-DS-Camera-Stream.png"><img alt="Sample DS Camera Stream" src="../../../_images/200-Sample-DS-Camera-Stream.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample DS Camera Stream</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Camera Stream is not live video; tap to refresh the image. Use the small
+white arrows at lower right to expand or revert the preview size. To
+close the preview, choose 3-dots and Camera Stream again.</p>
+<p>After touching the DS START button, the OpMode displays Telemetry for
+any recognized Pixel(s):</p>
+<figure class="align-center" id="id9">
+<a class="reference internal image-reference" href="../../../_images/210-Sample-DS-Telemetry.png"><img alt="Sample DS Telemetry" src="../../../_images/210-Sample-DS-Telemetry.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample DS Telemetry</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The above Telemetry shows the label name, and TFOD confidence level. It
+also gives the <strong>center location</strong> and <strong>size</strong> (in pixels) of the
+Bounding Box, which is the colored rectangle surrounding the recognized
+object.</p>
+<p>The pixel origin (0, 0) is at the top left corner of the image.</p>
+<p>Before and after touching DS START, the Robot Controller provides a
+video preview called <strong>LiveView</strong>.</p>
+<figure class="align-center" id="id10">
+<a class="reference internal image-reference" href="../../../_images/240-Sample-RC-LiveView.png"><img alt="Sample RC LiveView" src="../../../_images/240-Sample-RC-LiveView.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample RC LiveView</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>For Control Hub (with no built-in screen), plug in an HDMI monitor or
+learn about <code class="docutils literal notranslate"><span class="pre">scrcpy</span></code> (<a class="reference external" href="https://github.com/Genymobile/scrcpy">https://github.com/Genymobile/scrcpy</a>). The
+above image is a LiveView screenshot via <code class="docutils literal notranslate"><span class="pre">scrcpy</span></code>.</p>
+<p>If you don’t have a physical Pixel on hand, try pointing the camera at
+this image:</p>
+<figure class="align-center" id="id11">
+<a class="reference internal image-reference" href="../../../_images/300-Sample-Pixel.png"><img alt="Sample Pixel" src="../../../_images/300-Sample-Pixel.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample Pixel</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="modifying-the-sample">
+<h2>Modifying the Sample<a class="headerlink" href="#modifying-the-sample" title="Permalink to this heading"></a></h2>
+<p>In this Sample OpMode, the main loop ends only upon touching the DS Stop
+button. For competition, teams should <strong>modify this code</strong> in at least
+two ways:</p>
+<ul class="simple">
+<li><p>for a significant recognition, take action or store key information –
+inside the FOR loop</p></li>
+<li><p>end the main loop based on your criteria, to continue the OpMode</p></li>
+</ul>
+<p>As an example, you might set a Boolean variable <code class="docutils literal notranslate"><span class="pre">isPixelDetected</span></code> to
+<code class="docutils literal notranslate"><span class="pre">true</span></code>, if a significant recognition has occurred.</p>
+<p>You might also evaluate and store which randomized Spike Mark (red or
+blue tape stripe) holds the white Pixel.</p>
+<p>Regarding the main loop, it could end after the camera views all three
+Spike Marks, or after your code provides a high-confidence result. If
+the camera’s view includes more than one Spike Mark position, perhaps
+the white Pixel’s <strong>Bounding Box</strong> size and location could be useful.
+Teams should consider how long to seek an acceptable recognition, and
+what to do otherwise.</p>
+<p>In any case, the OpMode should exit the main loop and continue running,
+using any stored information.</p>
+<p>Best of luck this season!</p>
+<hr class="docutils" />
+<p>Questions, comments and corrections to <a class="reference external" href="mailto:westsiderobotics&#37;&#52;&#48;verizon&#46;net">westsiderobotics<span>&#64;</span>verizon<span>&#46;</span>net</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../tensorflow_ff_2021/tensorflow-ff-2021.html" class="btn btn-neutral float-left" title="TensorFlow for FREIGHT FRENZY presented by Raytheon Technologies" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../blocks_tfod_opmode_custom/blocks-tfod-opmode-custom.html" class="btn btn-neutral float-right" title="Blocks Custom Model Sample OpMode for TFOD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a href="../../../tos/tos.html">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

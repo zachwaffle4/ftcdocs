@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AprilTag Pose &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/hoverxref.js"></script>
+        <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../../_static/js/micromodal.min.js"></script>
+        <script src="../../../_static/js/external-links-new-tab.js"></script>
+        <script src="../../../_static/js/adjust-css-vars.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../../_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="AprilTag Library" href="../apriltag_library/apriltag-library.html" />
+    <link rel="prev" title="AprilTag Camera Calibration" href="../apriltag_camera_calibration/apriltag-camera-calibration.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <!-- Color Strip -->
+        <div class="color-strip">
+            <div class="fred"></div>
+            <div class="forange"></div>
+            <div class="fblue"></div>
+        </div>
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>          
+			<li id="ftc-page-link"><a href="https://www.firstinspires.org/resource-library/ftc/game-and-season-info" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            FIRST Tech Challenge Docs
+              <img src="../../../_static/FIRSTTech_iconHorz_RGB_reverse.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../programming_resources/index.html">Programming Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#programming-tutorials">Programming Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#supporting-documentation">Supporting Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../programming_resources/index.html#apriltag-programming">AprilTag Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../visionportal_overview/visionportal-overview.html">VisionPortal Overview</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vision_processor_init/vision-processor-init.html">Vision Processor Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visionportal_init/visionportal-init.html">VisionPortal Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visionportal_previews/visionportal-previews.html">VisionPortal Previews</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../apriltag_id_code/apriltag-id-code.html">AprilTag ID Codes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../apriltag_metadata/apriltag-metadata.html">AprilTag Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../apriltag_reference_frame/apriltag-reference-frame.html">AprilTag Reference Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../apriltag_camera_calibration/apriltag-camera-calibration.html">AprilTag Camera Calibration</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">AprilTag Pose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../apriltag_library/apriltag-library.html">AprilTag Library</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visionportal_cpu_and_bandwidth/visionportal-cpu-and-bandwidth.html">VisionPortal CPU and Bandwidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../visionportal_camera_controls/visionportal-camera-controls.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vision_multiportal/vision-multiportal.html">Vision Multiportal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../apriltag_advanced_use/apriltag-advanced-use.html">AprilTag Advanced Use</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../visionportal_webcams/visionportal-webcams.html">Webcams for VisionPortal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../apriltag_localization/apriltag-localization.html">AprilTag Localization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../apriltag_tips/decode_apriltag/decode-apriltag.html">AprilTag Challenges in DECODE presented by RTX</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#tensorflow-programming">TensorFlow Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#vision-programming">Vision Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#camera-color-processing">Camera Color Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#advanced-topics">Advanced Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#java-tutorials">Java Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programming_resources/index.html#additional-first-website-resources">Additional <em>FIRST</em> Website Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programming Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/shared/choosing_program_lang/choosing-program-lang.html">Choosing a Programming Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/blocks/Blocks-Tutorial.html">Blocks Programming Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/onbot_java/OnBot-Java-Tutorial.html">OnBot Java Programming Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../programming_resources/android_studio_java/Android-Studio-Tutorial.html">Android Studio Programming Tutorial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">AprilTag Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../visionportal_overview/visionportal-overview.html">VisionPortal Overview</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vision_processor_init/vision-processor-init.html">Vision Processor Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_init/visionportal-init.html">VisionPortal Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_previews/visionportal-previews.html">VisionPortal Previews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_id_code/apriltag-id-code.html">AprilTag ID Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_metadata/apriltag-metadata.html">AprilTag Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_reference_frame/apriltag-reference-frame.html">AprilTag Reference Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_camera_calibration/apriltag-camera-calibration.html">AprilTag Camera Calibration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">AprilTag Pose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_library/apriltag-library.html">AprilTag Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_cpu_and_bandwidth/visionportal-cpu-and-bandwidth.html">VisionPortal CPU and Bandwidth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visionportal_camera_controls/visionportal-camera-controls.html">VisionPortal Camera Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vision_multiportal/vision-multiportal.html">Vision Multiportal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apriltag_advanced_use/apriltag-advanced-use.html">AprilTag Advanced Use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../visionportal_webcams/visionportal-webcams.html">Webcams for VisionPortal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apriltag_localization/apriltag-localization.html">AprilTag Localization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Electrostatic Discharge</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../programming_resources/index.html">Programming Resources</a></li>
+          <li class="breadcrumb-item"><a href="../visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+      <li class="breadcrumb-item active">AprilTag Pose</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/apriltag/vision_portal/apriltag_pose/apriltag-pose.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="apriltag-pose">
+<h1>AprilTag Pose<a class="headerlink" href="#apriltag-pose" title="Permalink to this heading"></a></h1>
+<p>The SDK can evaluate a <strong>flat AprilTag</strong> (not curved) to estimate <strong>pose</strong>, the
+combination of:</p>
+<ul class="simple">
+<li><p>relative position <strong>from the camera lens center to the AprilTag center</strong>, and</p></li>
+<li><p>orientation of the AprilTag <strong>in the camera’s reference frame</strong></p></li>
+</ul>
+<p>As described at the previous page <strong>FTC Reference Frame</strong>, position is
+expressed as (X, Y, Z).  Orientation is expressed as rotation about (X, Y, Z),
+called Pitch, Roll and Yaw respectively.</p>
+<p>The tag must be in the Library, which ensures that tag size (with units) is
+defined.  Estimating pose requires knowing the tag size.</p>
+<p>As demonstrated in the Sample OpModes, here are ways to retrieve the estimated
+pose values.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="5fabc74b-8604-4e85-b132-318c06e49699" name="7d899dfb-a0d9-439a-aec0-39a8fc4eac9b" type="radio">
+</input><label class="sd-tab-label" data-sync-id="blocks" for="5fabc74b-8604-4e85-b132-318c06e49699">
+Blocks</label><div class="sd-tab-content docutils">
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/Blocks-pose-oval.png"><img alt="AprilTag Pose Blocks" src="../../../_images/Blocks-pose-oval.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-text">AprilTag Pose Blocks</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Use each of these green Blocks to pass a Pose value to a Telemetry Block, or to a Variable:</p>
+</div>
+<input id="1e427f6d-6ca0-456c-990b-05d5e42f54e3" name="7d899dfb-a0d9-439a-aec0-39a8fc4eac9b" type="radio">
+</input><label class="sd-tab-label" data-sync-id="java" for="1e427f6d-6ca0-456c-990b-05d5e42f54e3">
+Java</label><div class="sd-tab-content docutils">
+<p>Use these <cite>ftcPose</cite> fields for Telemetry, or assign to a Variable:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">AprilTagDetection</span><span class="w"> </span><span class="n">myAprilTagDetection</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">myTagPoseX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagDetection</span><span class="p">.</span><span class="na">ftcPose</span><span class="p">.</span><span class="na">x</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">myTagPoseY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagDetection</span><span class="p">.</span><span class="na">ftcPose</span><span class="p">.</span><span class="na">y</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">myTagPoseZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagDetection</span><span class="p">.</span><span class="na">ftcPose</span><span class="p">.</span><span class="na">z</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">myTagPosePitch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagDetection</span><span class="p">.</span><span class="na">ftcPose</span><span class="p">.</span><span class="na">pitch</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">myTagPoseRoll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagDetection</span><span class="p">.</span><span class="na">ftcPose</span><span class="p">.</span><span class="na">roll</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">myTagPoseYaw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagDetection</span><span class="p">.</span><span class="na">ftcPose</span><span class="p">.</span><span class="na">yaw</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>The SDK terms for Pitch, Roll and Yaw are</em> <strong>not the same</strong> <em>as the native
+AprilTag terms, due to the FTC reference frame.</em></p>
+<p>Teams may find it helpful to use a <strong>calculated extension</strong> of the basic pose,
+with these terms:</p>
+<ul class="simple">
+<li><p><strong>Range</strong>, direct (point-to-point) distance to the tag center</p></li>
+<li><p><strong>Bearing</strong>, the angle the camera must turn (left/right) to point directly at the tag center</p></li>
+<li><p><strong>Elevation</strong>, the angle the camera must tilt (up/down) to point directly at the tag center</p></li>
+</ul>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="8f67272b-ff71-4083-a533-a69dee416476" name="7fae50c9-a728-4385-ae02-693c53e6677f" type="radio">
+</input><label class="sd-tab-label" data-sync-id="blocks" for="8f67272b-ff71-4083-a533-a69dee416476">
+Blocks</label><div class="sd-tab-content docutils">
+<p>Here each green Block assigns its value to a Variable:</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/Blocks-RBE.png"><img alt="AprilTag RBE Blocks" src="../../../_images/Blocks-RBE.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-text">AprilTag Range, Bearing, Elevation Blocks</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+<input id="dc156322-f757-4256-8d3f-cce643ff5af0" name="7fae50c9-a728-4385-ae02-693c53e6677f" type="radio">
+</input><label class="sd-tab-label" data-sync-id="java" for="dc156322-f757-4256-8d3f-cce643ff5af0">
+Java</label><div class="sd-tab-content docutils">
+<p>Use these <cite>ftcPose</cite> fields for Telemetry, or assign to a Variable:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">AprilTagDetection</span><span class="w"> </span><span class="n">myAprilTagDetection</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">myTagPoseRange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagDetection</span><span class="p">.</span><span class="na">ftcPose</span><span class="p">.</span><span class="na">range</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">myTagPoseBearing</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagDetection</span><span class="p">.</span><span class="na">ftcPose</span><span class="p">.</span><span class="na">bearing</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">myTagPoseElevation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myAprilTagDetection</span><span class="p">.</span><span class="na">ftcPose</span><span class="p">.</span><span class="na">elevation</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here, the terms do agree with the SDK method names, because they are
+calculated within the SDK from the native AprilTag pose values shown above
+(XYZ distances and PRY rotations).</p>
+<p>As with tag ID code, pose data is usually retrieved inside a <code class="docutils literal notranslate"><span class="pre">for()</span> <span class="pre">loop</span></code>,
+for immediate processing or stored for later use.  See the <strong>Initialization</strong>
+page for sample <code class="docutils literal notranslate"><span class="pre">for()</span> <span class="pre">loop</span></code> code.</p>
+<p>Unlike tag ID code, a detected AprilTag might provide <strong>no pose data</strong> – if it
+was not placed into the Library by default or with the custom Builder pattern.
+Namely, the tag might lack Metadata including <strong>tag size</strong>, required for pose
+estimation.</p>
+<p>To avoid logic errors, an OpMode can check the Metadata for a <strong>null</strong>
+condition before attempting to process pose data.  This is illustrated in these
+Sample OpModes:</p>
+<ul class="simple">
+<li><p>Blocks: <cite>ConceptAprilTag</cite></p></li>
+<li><p>Java: <cite>ConceptAprilTag.java</cite></p></li>
+</ul>
+<p>More discussion of AprilTag pose data is available here:</p>
+<p><a class="reference internal" href="../../understanding_apriltag_detection_values/understanding-apriltag-detection-values.html#understanding-apriltag-detection-values"><span class="std std-ref">Understanding AprilTag Detection Values</span></a></p>
+<hr class="docutils" />
+<p><em>Questions, comments and corrections to westsiderobotics&#64;verizon.net</em></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../apriltag_camera_calibration/apriltag-camera-calibration.html" class="btn btn-neutral float-left" title="AprilTag Camera Calibration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../apriltag_library/apriltag-library.html" class="btn btn-neutral float-right" title="AprilTag Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a href="../../../tos/tos.html">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample OpModes &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/ftc-rtd.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/sphinx_rtd_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/general.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/dark_mode_css/dark.css" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/FIRSTicon_RGB_withTM.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/js/hoverxref.js"></script>
+        <script src="../../../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../../../_static/js/micromodal.min.js"></script>
+        <script src="../../../../_static/js/external-links-new-tab.js"></script>
+        <script src="../../../../_static/js/adjust-css-vars.js"></script>
+        <script src="../../../../_static/design-tabs.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../../../_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Camera Calibration for FIRST Tech Challenge" href="../../camera_calibration/camera-calibration.html" />
+    <link rel="prev" title="Evaluating Your Webcam" href="../eval/eval.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <!-- Color Strip -->
+        <div class="color-strip">
+            <div class="fred"></div>
+            <div class="forange"></div>
+            <div class="fblue"></div>
+        </div>
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>          
+			<li id="ftc-page-link"><a href="https://www.firstinspires.org/resource-library/ftc/game-and-season-info" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            FIRST Tech Challenge Docs
+              <img src="../../../../_static/FIRSTTech_iconHorz_RGB_reverse.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Programming Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#programming-tutorials">Programming Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#supporting-documentation">Supporting Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#apriltag-programming">AprilTag Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#tensorflow-programming">TensorFlow Programming</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#vision-programming">Vision Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../vision_overview/vision-overview.html">Computer Vision Overview</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Webcam Controls</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../overview/overview.html">Software Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../exposure/index.html">Exposure - Webcam Controls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gain/index.html">Gain - Webcam Controls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../white_balance/index.html">White Balance - Webcam Controls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../focus/index.html">Focus - Webcam Controls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ptz/index.html">Pan-Tilt-Zoom Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../eval/eval.html">Evaluating Your Webcam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../eval/eval.html#some-caveats">Some Caveats</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Sample OpModes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../camera_calibration/camera-calibration.html">Camera Calibration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#camera-color-processing">Camera Color Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#advanced-topics">Advanced Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#java-tutorials">Java Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#additional-first-website-resources">Additional <em>FIRST</em> Website Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programming Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../shared/choosing_program_lang/choosing-program-lang.html">Choosing a Programming Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../blocks/Blocks-Tutorial.html">Blocks Programming Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../onbot_java/OnBot-Java-Tutorial.html">OnBot Java Programming Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../android_studio_java/Android-Studio-Tutorial.html">Android Studio Programming Tutorial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">AprilTag Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/visionportal_webcams/visionportal-webcams.html">Webcams for VisionPortal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/vision_portal/apriltag_localization/apriltag-localization.html">AprilTag Localization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Electrostatic Discharge</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Programming Resources</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Webcam Controls</a></li>
+      <li class="breadcrumb-item active">Sample OpModes</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/programming_resources/vision/webcam_controls/samples/samples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sample-opmodes">
+<h1>Sample OpModes<a class="headerlink" href="#sample-opmodes" title="Permalink to this heading"></a></h1>
+<p>The intent of this tutorial is to describe the available webcam
+controls, allowing programmers to <strong>develop their own solutions</strong> guided
+by the SDK API (Javadoc).</p>
+<p>The following sample OpModes are linked here for reference only. These
+rudimentary OpModes may not apply to your webcam and may not meet your
+needs in general.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Adjust exposure, gain and AE Priority<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><a class="reference download internal" download="" href="../../../../_downloads/32d0f840c0306ffcaaff33ca2d5bc5e6/W_WebcamControls_Exp_Gain.java"><code class="xref download docutils literal notranslate"><span class="pre">W_WebcamControls_Exp_Gain.java</span></code></a></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/* </span>
+
+<span class="cm">This example OpMode allows direct gamepad control of webcam exposure and </span>
+<span class="cm">gain.  It&#39;s a companion to the FTC wiki tutorial on Webcam Controls.</span>
+
+<span class="cm">Add your own Vuforia key, where shown below.</span>
+
+<span class="cm">Questions, comments and corrections to westsiderobotics@verizon.net</span>
+
+<span class="cm">from v06 11/10/21</span>
+<span class="cm">*/</span>
+
+<span class="kn">package</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.teamcode</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.hardware.camera.controls.ExposureControl</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.hardware.camera.controls.GainControl</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.concurrent.TimeUnit</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.Disabled</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.LinearOpMode</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.TeleOp</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.ClassFactory</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer</span><span class="p">;</span>
+
+<span class="nd">@TeleOp</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;Webcam Controls - Exp &amp; Gain v06&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Webcam Controls&quot;</span><span class="p">)</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">W_WebcamControls_Exp_Gain_v06</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">LinearOpMode</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">VUFORIA_KEY</span><span class="w"> </span><span class="o">=</span>
+<span class="w">            </span><span class="s">&quot;  INSERT YOUR VUFORIA KEY HERE  &quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Declare class members</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">VuforiaLocalizer</span><span class="w"> </span><span class="n">vuforia</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">WebcamName</span><span class="w"> </span><span class="n">webcamName</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">ExposureControl</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">;</span><span class="w">  </span><span class="c1">// declare exposure control object</span>
+<span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">minExp</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">maxExp</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">curExp</span><span class="p">;</span><span class="w">            </span><span class="c1">// exposure is duration, in time units specified</span>
+
+<span class="w">    </span><span class="n">GainControl</span><span class="w"> </span><span class="n">myGainControl</span><span class="p">;</span><span class="w">      </span><span class="c1">// declare gain control object</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">minGain</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">maxGain</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">curGain</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">wasSetGainSuccessful</span><span class="p">;</span><span class="w">   </span><span class="c1">// returned from setGain()</span>
+
+<span class="w">    </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">runOpMode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">setMsTransmissionInterval</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Connect to the webcam, using exact name per robot Configuration.</span>
+<span class="w">        </span><span class="n">webcamName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">WebcamName</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Webcam 1&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="cm">/*</span>
+<span class="cm">         * Configure Vuforia by creating a Parameter object, and passing it to the Vuforia engine.</span>
+<span class="cm">         * We pass Vuforia the handle to a camera preview resource (on the RC screen).</span>
+<span class="cm">         */</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">cameraMonitorViewId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">appContext</span><span class="p">.</span><span class="na">getResources</span><span class="p">().</span><span class="na">getIdentifier</span><span class="p">(</span><span class="s">&quot;cameraMonitorViewId&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">appContext</span><span class="p">.</span><span class="na">getPackageName</span><span class="p">());</span>
+<span class="w">        </span><span class="n">VuforiaLocalizer</span><span class="p">.</span><span class="na">Parameters</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VuforiaLocalizer</span><span class="p">.</span><span class="na">Parameters</span><span class="p">(</span><span class="n">cameraMonitorViewId</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// VuforiaLocalizer.Parameters parameters = new VuforiaLocalizer.Parameters();</span>
+
+<span class="w">        </span><span class="n">parameters</span><span class="p">.</span><span class="na">vuforiaLicenseKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VUFORIA_KEY</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// We also indicate which camera we wish to use.</span>
+<span class="w">        </span><span class="n">parameters</span><span class="p">.</span><span class="na">cameraName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">webcamName</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Assign the Vuforia engine object.</span>
+<span class="w">        </span><span class="n">vuforia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClassFactory</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">createVuforia</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Assign the exposure and gain control objects, to use their methods.</span>
+<span class="w">        </span><span class="n">myExposureControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vuforia</span><span class="p">.</span><span class="na">getCamera</span><span class="p">().</span><span class="na">getControl</span><span class="p">(</span><span class="n">ExposureControl</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<span class="w">        </span><span class="n">myGainControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vuforia</span><span class="p">.</span><span class="na">getCamera</span><span class="p">().</span><span class="na">getControl</span><span class="p">(</span><span class="n">GainControl</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Display exposure features and settings of this webcam.</span>
+<span class="w">        </span><span class="n">checkExposureFeatures</span><span class="p">();</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Retrieve from webcam its current exposure and gain values.</span>
+<span class="w">        </span><span class="n">curExp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">getExposure</span><span class="p">(</span><span class="n">TimeUnit</span><span class="p">.</span><span class="na">MILLISECONDS</span><span class="p">);</span>
+<span class="w">        </span><span class="n">curGain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myGainControl</span><span class="p">.</span><span class="na">getGain</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Display mode and starting values to user.</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;\nTouch Start arrow to control webcam Exposure and Gain&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;\nCurrent exposure mode&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">getMode</span><span class="p">());</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Current exposure value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">curExp</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Current gain value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">curGain</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+
+
+<span class="w">        </span><span class="n">waitForStart</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Get webcam exposure limits.</span>
+<span class="w">            </span><span class="n">minExp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">getMinExposure</span><span class="p">(</span><span class="n">TimeUnit</span><span class="p">.</span><span class="na">MILLISECONDS</span><span class="p">);</span>
+<span class="w">            </span><span class="n">maxExp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">getMaxExposure</span><span class="p">(</span><span class="n">TimeUnit</span><span class="p">.</span><span class="na">MILLISECONDS</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Get webcam gain limits.</span>
+<span class="w">            </span><span class="n">minGain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myGainControl</span><span class="p">.</span><span class="na">getMinGain</span><span class="p">();</span>
+<span class="w">            </span><span class="n">maxGain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myGainControl</span><span class="p">.</span><span class="na">getMaxGain</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Change mode to Manual, in order to control directly.</span>
+<span class="w">        </span><span class="c1">// A non-default setting may persist in the camera, until changed again.</span>
+<span class="w">        </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">setMode</span><span class="p">(</span><span class="n">ExposureControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">Manual</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Set initial exposure and gain, same as current.</span>
+<span class="w">        </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">setExposure</span><span class="p">(</span><span class="n">curExp</span><span class="p">,</span><span class="w"> </span><span class="n">TimeUnit</span><span class="p">.</span><span class="na">MILLISECONDS</span><span class="p">);</span>
+<span class="w">        </span><span class="n">myGainControl</span><span class="p">.</span><span class="na">setGain</span><span class="p">(</span><span class="n">curGain</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// This loop allows manual adjustment of exposure and gain,</span>
+<span class="w">        </span><span class="c1">// while observing the effect on the preview image.</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">opModeIsActive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">            </span><span class="c1">// Manually adjust the webcam exposure and gain variables.</span>
+<span class="w">            </span><span class="kt">float</span><span class="w"> </span><span class="n">changeExp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">left_stick_y</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">float</span><span class="w"> </span><span class="n">changeGain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">right_stick_y</span><span class="p">;</span>
+
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">changeExpInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">changeExp</span><span class="o">*</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">changeGainInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">changeGain</span><span class="o">*</span><span class="mi">5</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">curExp</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">changeExpInt</span><span class="p">;</span>
+<span class="w">            </span><span class="n">curGain</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">changeGainInt</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// Ensure inputs are within webcam limits, if provided.</span>
+<span class="w">            </span><span class="n">curExp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">curExp</span><span class="p">,</span><span class="w"> </span><span class="n">minExp</span><span class="p">);</span>
+<span class="w">            </span><span class="n">curExp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">curExp</span><span class="p">,</span><span class="w"> </span><span class="n">maxExp</span><span class="p">);</span>
+<span class="w">            </span><span class="n">curGain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">curGain</span><span class="p">,</span><span class="w"> </span><span class="n">minGain</span><span class="p">);</span>
+<span class="w">            </span><span class="n">curGain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">curGain</span><span class="p">,</span><span class="w"> </span><span class="n">maxGain</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// Update the webcam&#39;s settings.</span>
+<span class="w">            </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">setExposure</span><span class="p">(</span><span class="n">curExp</span><span class="p">,</span><span class="w"> </span><span class="n">TimeUnit</span><span class="p">.</span><span class="na">MILLISECONDS</span><span class="p">);</span>
+<span class="w">            </span><span class="n">wasSetGainSuccessful</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myGainControl</span><span class="p">.</span><span class="na">setGain</span><span class="p">(</span><span class="n">curGain</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// Manually set Auto-Exposure Priority.</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">                           </span><span class="c1">// turn on with green A</span>
+<span class="w">                </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">setAePriority</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">                    </span><span class="c1">// turn off with red B</span>
+<span class="w">                </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">setAePriority</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span><span class="w"> </span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;\nExposure: left stick Y; Gain: right stick Y&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Exposure&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Min:%d, Max:%d, Current:%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">minExp</span><span class="p">,</span><span class="w"> </span><span class="n">maxExp</span><span class="p">,</span><span class="w"> </span><span class="n">curExp</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Gain&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Min:%d, Max:%d, Current:%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">minGain</span><span class="p">,</span><span class="w"> </span><span class="n">maxGain</span><span class="p">,</span><span class="w"> </span><span class="n">curGain</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Gain change successful?&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wasSetGainSuccessful</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Current exposure mode&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">getMode</span><span class="p">());</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;\nAutoExposure Priority: green A ON; red B OFF&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;AutoExposure Priority?&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">getAePriority</span><span class="p">());</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+
+<span class="w">            </span><span class="n">sleep</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+
+<span class="w">        </span><span class="p">}</span><span class="w">   </span><span class="c1">// end main while() loop</span>
+
+<span class="w">    </span><span class="p">}</span><span class="w">    </span><span class="c1">// end OpMode</span>
+
+
+<span class="w">    </span><span class="c1">// Display the exposure features and modes supported by this webcam.</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">checkExposureFeatures</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">isStopRequested</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;**Exposure settings of this webcam:&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Exposure control supported?&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">isExposureSupported</span><span class="p">());</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Autoexposure priority?&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">getAePriority</span><span class="p">());</span>
+
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;\n**Exposure Modes supported by this webcam:&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;AperturePriority&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">isModeSupported</span><span class="p">(</span><span class="n">ExposureControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">AperturePriority</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Auto&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">isModeSupported</span><span class="p">(</span><span class="n">ExposureControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">Auto</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;ContinuousAuto&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">isModeSupported</span><span class="p">(</span><span class="n">ExposureControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">ContinuousAuto</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Manual&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">isModeSupported</span><span class="p">(</span><span class="n">ExposureControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">Manual</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;ShutterPriority&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">isModeSupported</span><span class="p">(</span><span class="n">ExposureControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">ShutterPriority</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Unknown&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">isModeSupported</span><span class="p">(</span><span class="n">ExposureControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">Unknown</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;*** PRESS Y TO CONTINUE ***&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span>
+<span class="w">    </span><span class="p">}</span><span class="w">   </span><span class="c1">// end method checkExposureFeatures()</span>
+
+
+<span class="p">}</span><span class="w">   </span><span class="c1">// end OpMode class</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Adjust exposure and gain with TFOD (test OpMode for Examples 1, 2, 3)<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><a class="reference download internal" download="" href="../../../../_downloads/bcccde9ce611f179c427b86ba94625cc/W_TFOD_WebcamExpGain.java"><code class="xref download docutils literal notranslate"><span class="pre">W_TFOD_WebcamExpGain.java</span></code></a></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * This example OpMode shows how existing webcam controls can affect </span>
+<span class="cm"> * TensorFlow Object Detection (TFOD) of FTC Freight Frenzy game elements.</span>
+<span class="cm"> * It&#39;s a companion to the FTC wiki tutorial on Webcam Controls.</span>
+<span class="cm"> * </span>
+<span class="cm"> * Put the Driver Station in Landscape Mode for this telemetry.</span>
+<span class="cm"> *</span>
+<span class="cm"> * The FTC SDK 7.0 includes up to 7 ways of controlling the preview image,</span>
+<span class="cm"> * depending on webcam capability.  This OpMode uses 2 of those controls, </span>
+<span class="cm"> * Exposure and Gain, available on most webcams and offering good</span>
+<span class="cm"> * potential for affecting TFOD recognition.</span>
+<span class="cm"> * </span>
+<span class="cm"> * This OpMode simply adds ExposureControl and GainControl methods to the FTC</span>
+<span class="cm"> * sample called &quot;ConceptTensorFlowObjectDetectionWebcam.java&quot;.  Here, you can</span>
+<span class="cm"> * use a gamepad to directly change the preview image and observe TFOD results.</span>
+<span class="cm"> * </span>
+<span class="cm"> * Teams can use this to seek better recognition results from their existing</span>
+<span class="cm"> * TFOD model -- whether the basic version in the 7.0 release, or their own</span>
+<span class="cm"> * custom model created with the FTC Machine Learning toolchain.</span>
+<span class="cm"> * </span>
+<span class="cm"> * Exposure, gain and other CameraControl values could be pre-programmed in</span>
+<span class="cm"> * team autonomous OpModes.  It&#39;s also possible to manually enter such values</span>
+<span class="cm"> * before a match begins, based on anticipated lighting, starting position and </span>
+<span class="cm"> * other game-time factors.</span>
+<span class="cm"> * </span>
+<span class="cm"> * Add your own Vuforia key, where shown below.</span>
+<span class="cm"> *</span>
+<span class="cm"> * Questions, comments and corrections to westsiderobotics@verizon.net</span>
+<span class="cm"> *</span>
+<span class="cm"> * from v04 11/11/21 </span>
+<span class="cm"> */</span>
+<span class="w"> </span>
+<span class="kn">package</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.teamcode</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.hardware.camera.controls.ExposureControl</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.hardware.camera.controls.GainControl</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.concurrent.TimeUnit</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.TeleOp</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.LinearOpMode</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.tfod.TFObjectDetector</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.tfod.Recognition</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.ClassFactory</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="nd">@TeleOp</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;W TFOD Webcam Exposure &amp; Gain v04&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Webcam Controls&quot;</span><span class="p">)</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">W_TFOD_WebcamExpGain_v04</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">LinearOpMode</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="cm">/* Note: This sample uses the all-objects Tensor Flow model (FreightFrenzy_BCDM.tflite), which contains</span>
+<span class="cm">   * the following 4 detectable objects</span>
+<span class="cm">   *  0: Ball,</span>
+<span class="cm">   *  1: Cube,</span>
+<span class="cm">   *  2: Duck,</span>
+<span class="cm">   *  3: Marker (duck location tape marker)</span>
+<span class="cm">   *</span>
+<span class="cm">   *  Two additional model assets are available which only contain a subset of the objects:</span>
+<span class="cm">   *  FreightFrenzy_BC.tflite  0: Ball,  1: Cube</span>
+<span class="cm">   *  FreightFrenzy_DM.tflite  0: Duck,  1: Marker</span>
+<span class="cm">   */</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">TFOD_MODEL_ASSET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;FreightFrenzy_BCDM.tflite&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">LABELS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="s">&quot;Ball&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s">&quot;Cube&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s">&quot;Duck&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s">&quot;Marker&quot;</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="cm">/*</span>
+<span class="cm">     * IMPORTANT: You need to obtain your own license key to use Vuforia. The string below with which</span>
+<span class="cm">     * &#39;parameters.vuforiaLicenseKey&#39; is initialized is for illustration only, and will not function.</span>
+<span class="cm">     * A Vuforia &#39;Development&#39; license key, can be obtained free of charge from the Vuforia developer</span>
+<span class="cm">     * web site at https://developer.vuforia.com/license-manager.</span>
+<span class="cm">     *</span>
+<span class="cm">     * Vuforia license keys are always 380 characters long, and look as if they contain mostly</span>
+<span class="cm">     * random data. As an example, here is a example of a fragment of a valid key:</span>
+<span class="cm">     *      ... yIgIzTqZ4mWjk9wd3cZO9T1axEqzuhxoGlfOOI2dRzKS4T0hQ8kT ...</span>
+<span class="cm">     * Once you&#39;ve obtained a license key, copy the string from the Vuforia web site</span>
+<span class="cm">     * and paste it in to your code on the next line, between the double quotes.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">VUFORIA_KEY</span><span class="w"> </span><span class="o">=</span>
+<span class="w">            </span><span class="c1">//&quot;   INSERT YOUR VUFORIA KEY HERE  &quot;;</span>
+<span class="w">            </span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * {@link #vuforia} is the variable we will use to store our instance of the Vuforia</span>
+<span class="cm">     * localization engine.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">VuforiaLocalizer</span><span class="w"> </span><span class="n">vuforia</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * {@link #tfod} is the variable we will use to store our instance of the TensorFlow Object</span>
+<span class="cm">     * Detection engine.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">TFObjectDetector</span><span class="w"> </span><span class="n">tfod</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// *** ADD WEBCAM CONTROLS -- SECTION START ***</span>
+<span class="w">    </span><span class="n">ExposureControl</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">;</span><span class="w">  </span><span class="c1">// declare exposure control object</span>
+<span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">minExp</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">maxExp</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">curExp</span><span class="p">;</span><span class="w">            </span><span class="c1">// exposure is duration, in time units specified</span>
+
+<span class="w">    </span><span class="n">GainControl</span><span class="w"> </span><span class="n">myGainControl</span><span class="p">;</span><span class="w">      </span><span class="c1">// declare gain control object</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">minGain</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">maxGain</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">curGain</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">wasSetGainSuccessful</span><span class="p">;</span><span class="w">   </span><span class="c1">// returned from setGain()</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isAEPriorityOn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// *** ADD WEBCAM CONTROLS -- SECTION END ***</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">runOpMode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// The TFObjectDetector uses the camera frames from the VuforiaLocalizer, so we create that</span>
+<span class="w">        </span><span class="c1">// first.</span>
+<span class="w">        </span><span class="n">initVuforia</span><span class="p">();</span>
+<span class="w">        </span><span class="n">initTfod</span><span class="p">();</span>
+
+<span class="w">        </span><span class="cm">/**</span>
+<span class="cm">         * Activate TensorFlow Object Detection before we wait for the start command.</span>
+<span class="cm">         * Do it here so that the Camera Stream window will have the TensorFlow annotations visible.</span>
+<span class="cm">         **/</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tfod</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">tfod</span><span class="p">.</span><span class="na">activate</span><span class="p">();</span>
+
+<span class="w">            </span><span class="c1">// The TensorFlow software will scale the input images from the camera to a lower resolution.</span>
+<span class="w">            </span><span class="c1">// This can result in lower detection accuracy at longer distances (&gt; 55cm or 22&quot;).</span>
+<span class="w">            </span><span class="c1">// If your target is at distance greater than 50 cm (20&quot;) you can adjust the magnification value</span>
+<span class="w">            </span><span class="c1">// to artificially zoom in to the center of image.  For best results, the &quot;aspectRatio&quot; argument</span>
+<span class="w">            </span><span class="c1">// should be set to the value of the images used to create the TensorFlow Object Detection model</span>
+<span class="w">            </span><span class="c1">// (typically 16/9).</span>
+<span class="w">            </span><span class="n">tfod</span><span class="p">.</span><span class="na">setZoom</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">16.0</span><span class="o">/</span><span class="mf">9.0</span><span class="p">);</span><span class="w">    </span><span class="c1">// modified for testing Exposure &amp; Gain</span>
+<span class="w">            </span><span class="c1">// tfod.setZoom(2.5, 16.0/9.0); // original settings in Concept OpMode</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// *** ADD WEBCAM CONTROLS -- SECTION START ***</span>
+
+<span class="w">        </span><span class="c1">// Assign the exposure and gain control objects, to use their methods.</span>
+<span class="w">        </span><span class="n">myExposureControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vuforia</span><span class="p">.</span><span class="na">getCamera</span><span class="p">().</span><span class="na">getControl</span><span class="p">(</span><span class="n">ExposureControl</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<span class="w">        </span><span class="n">myGainControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vuforia</span><span class="p">.</span><span class="na">getCamera</span><span class="p">().</span><span class="na">getControl</span><span class="p">(</span><span class="n">GainControl</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// get webcam exposure limits</span>
+<span class="w">        </span><span class="n">minExp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">getMinExposure</span><span class="p">(</span><span class="n">TimeUnit</span><span class="p">.</span><span class="na">MILLISECONDS</span><span class="p">);</span>
+<span class="w">        </span><span class="n">maxExp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">getMaxExposure</span><span class="p">(</span><span class="n">TimeUnit</span><span class="p">.</span><span class="na">MILLISECONDS</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// get webcam gain limits</span>
+<span class="w">        </span><span class="n">minGain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myGainControl</span><span class="p">.</span><span class="na">getMinGain</span><span class="p">();</span>
+<span class="w">        </span><span class="n">maxGain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myGainControl</span><span class="p">.</span><span class="na">getMaxGain</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Change mode to Manual, in order to control directly.</span>
+<span class="w">        </span><span class="c1">// A non-default setting may persist in the camera, until changed again.</span>
+<span class="w">        </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">setMode</span><span class="p">(</span><span class="n">ExposureControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">Manual</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Retrieve from webcam its current exposure and gain values</span>
+<span class="w">        </span><span class="n">curExp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">getExposure</span><span class="p">(</span><span class="n">TimeUnit</span><span class="p">.</span><span class="na">MILLISECONDS</span><span class="p">);</span>
+<span class="w">        </span><span class="n">curGain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myGainControl</span><span class="p">.</span><span class="na">getGain</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// display exposure mode and starting values to user</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;\nTouch Start arrow to control webcam Exposure and Gain&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;\nCurrent exposure mode&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">getMode</span><span class="p">());</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Current exposure value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">curExp</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Current gain value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">curGain</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">// *** ADD WEBCAM CONTROLS -- SECTION END ***</span>
+
+
+<span class="w">        </span><span class="n">waitForStart</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">opModeIsActive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">opModeIsActive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span>
+<span class="w">                </span><span class="c1">// *** ADD WEBCAM CONTROLS -- SECTION START ***</span>
+<span class="w">                </span><span class="c1">// Driver Station in Landscape Mode for this telemetry.</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;Exposure: left stick Y; Gain: right stick Y&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Exposure&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Min:%d, Max:%d, Current:%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">minExp</span><span class="p">,</span><span class="w"> </span><span class="n">maxExp</span><span class="p">,</span><span class="w"> </span><span class="n">curExp</span><span class="p">);</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Gain&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Min:%d, Max:%d, Current:%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">minGain</span><span class="p">,</span><span class="w"> </span><span class="n">maxGain</span><span class="p">,</span><span class="w"> </span><span class="n">curGain</span><span class="p">);</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;\nAutoExposure Priority: green A ON; red B OFF&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;AE Priority on?&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">isAEPriorityOn</span><span class="p">);</span>
+<span class="w">                </span><span class="c1">// *** ADD WEBCAM CONTROLS -- SECTION END ***</span>
+<span class="w">    </span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tfod</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="c1">// getUpdatedRecognitions() will return null if no new information is available since</span>
+<span class="w">                    </span><span class="c1">// the last time that call was made.</span>
+<span class="w">                    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Recognition</span><span class="o">&gt;</span><span class="w"> </span><span class="n">updatedRecognitions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tfod</span><span class="p">.</span><span class="na">getUpdatedRecognitions</span><span class="p">();</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">updatedRecognitions</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                      </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;\n# Object Detected&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">updatedRecognitions</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+<span class="w">                      </span><span class="c1">// step through the list of recognitions and display boundary info.</span>
+<span class="w">                      </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">                      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Recognition</span><span class="w"> </span><span class="n">recognition</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">updatedRecognitions</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;label (%d)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="n">recognition</span><span class="p">.</span><span class="na">getLabel</span><span class="p">());</span>
+<span class="w">                        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;  left,top (%d)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;%.03f , %.03f&quot;</span><span class="p">,</span>
+<span class="w">                                </span><span class="n">recognition</span><span class="p">.</span><span class="na">getLeft</span><span class="p">(),</span><span class="w"> </span><span class="n">recognition</span><span class="p">.</span><span class="na">getTop</span><span class="p">());</span>
+<span class="w">                        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;  right,bottom (%d)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;%.03f , %.03f&quot;</span><span class="p">,</span>
+<span class="w">                                </span><span class="n">recognition</span><span class="p">.</span><span class="na">getRight</span><span class="p">(),</span><span class="w"> </span><span class="n">recognition</span><span class="p">.</span><span class="na">getBottom</span><span class="p">());</span>
+<span class="w">                        </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">                      </span><span class="p">}</span><span class="w">  </span><span class="c1">// end for() loop</span>
+<span class="w">                      </span>
+<span class="w">                    </span><span class="p">}</span><span class="w">   </span><span class="c1">// end if (updatedRecognitions)</span>
+<span class="w">                </span>
+<span class="w">                </span><span class="p">}</span><span class="w">   </span><span class="c1">// end if (tfod)</span>
+<span class="w">                </span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+<span class="w">                </span>
+<span class="w">                </span><span class="c1">// *** ADD WEBCAM CONTROLS -- SECTION START ***</span>
+<span class="w">                </span>
+<span class="w">                </span><span class="c1">// manually adjust the webcam exposure &amp; gain variables</span>
+<span class="w">                </span><span class="kt">float</span><span class="w"> </span><span class="n">changeExp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">left_stick_y</span><span class="p">;</span>
+<span class="w">                </span><span class="kt">float</span><span class="w"> </span><span class="n">changeGain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">right_stick_y</span><span class="p">;</span>
+
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">changeExpInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">changeExp</span><span class="o">*</span><span class="mi">2</span><span class="p">);</span><span class="w">     </span><span class="c1">// was *5</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">changeGainInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">changeGain</span><span class="o">*</span><span class="mi">2</span><span class="p">);</span><span class="w">   </span><span class="c1">// was *5</span>
+
+<span class="w">                </span><span class="n">curExp</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">changeExpInt</span><span class="p">;</span>
+<span class="w">                </span><span class="n">curGain</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">changeGainInt</span><span class="p">;</span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">           </span><span class="c1">// AE Priority ON with green A</span>
+<span class="w">                    </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">setAePriority</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="w">                    </span><span class="n">isAEPriorityOn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="c1">// AE Priority OFF with red B</span>
+<span class="w">                    </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">setAePriority</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="w">                    </span><span class="n">isAEPriorityOn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+
+<span class="w">                </span><span class="c1">// ensure inputs are within webcam limits, if provided</span>
+<span class="w">                </span><span class="n">curExp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">curExp</span><span class="p">,</span><span class="w"> </span><span class="n">minExp</span><span class="p">);</span>
+<span class="w">                </span><span class="n">curExp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">curExp</span><span class="p">,</span><span class="w"> </span><span class="n">maxExp</span><span class="p">);</span>
+<span class="w">                </span><span class="n">curGain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">curGain</span><span class="p">,</span><span class="w"> </span><span class="n">minGain</span><span class="p">);</span>
+<span class="w">                </span><span class="n">curGain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">curGain</span><span class="p">,</span><span class="w"> </span><span class="n">maxGain</span><span class="p">);</span>
+
+<span class="w">                </span><span class="c1">// update the webcam&#39;s settings</span>
+<span class="w">                </span><span class="n">myExposureControl</span><span class="p">.</span><span class="na">setExposure</span><span class="p">(</span><span class="n">curExp</span><span class="p">,</span><span class="w"> </span><span class="n">TimeUnit</span><span class="p">.</span><span class="na">MILLISECONDS</span><span class="p">);</span>
+<span class="w">                </span><span class="n">wasSetGainSuccessful</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myGainControl</span><span class="p">.</span><span class="na">setGain</span><span class="p">(</span><span class="n">curGain</span><span class="p">);</span>
+
+<span class="w">                </span><span class="n">sleep</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span><span class="w">             </span><span class="c1">// slow down the main while() loop</span>
+
+<span class="w">                </span><span class="c1">// *** ADD WEBCAM CONTROLS -- SECTION END ***</span>
+
+<span class="w">            </span><span class="p">}</span><span class="w">   </span><span class="c1">// end main while() loop</span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c1">// end if opModeIsActive()</span>
+
+<span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="c1">// end runOpMode()</span>
+
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Initialize the Vuforia localization engine.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initVuforia</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="cm">/*</span>
+<span class="cm">         * Configure Vuforia by creating a Parameter object, and passing it to the Vuforia engine.</span>
+<span class="cm">         */</span>
+<span class="w">        </span><span class="n">VuforiaLocalizer</span><span class="p">.</span><span class="na">Parameters</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VuforiaLocalizer</span><span class="p">.</span><span class="na">Parameters</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">parameters</span><span class="p">.</span><span class="na">vuforiaLicenseKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VUFORIA_KEY</span><span class="p">;</span>
+<span class="w">        </span><span class="n">parameters</span><span class="p">.</span><span class="na">cameraName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">WebcamName</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Webcam 1&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">//  Instantiate the Vuforia engine</span>
+<span class="w">        </span><span class="n">vuforia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClassFactory</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">createVuforia</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Loading trackables is not necessary for the TensorFlow Object Detection engine.</span>
+
+<span class="w">    </span><span class="p">}</span><span class="w">   </span><span class="c1">// end method initVuforia()</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Initialize the TensorFlow Object Detection engine.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initTfod</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">tfodMonitorViewId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">appContext</span><span class="p">.</span><span class="na">getResources</span><span class="p">().</span><span class="na">getIdentifier</span><span class="p">(</span>
+<span class="w">            </span><span class="s">&quot;tfodMonitorViewId&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">appContext</span><span class="p">.</span><span class="na">getPackageName</span><span class="p">());</span>
+<span class="w">        </span><span class="n">TFObjectDetector</span><span class="p">.</span><span class="na">Parameters</span><span class="w"> </span><span class="n">tfodParameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TFObjectDetector</span><span class="p">.</span><span class="na">Parameters</span><span class="p">(</span><span class="n">tfodMonitorViewId</span><span class="p">);</span>
+<span class="w">       </span><span class="n">tfodParameters</span><span class="p">.</span><span class="na">minResultConfidence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.8f</span><span class="p">;</span>
+<span class="w">       </span><span class="n">tfodParameters</span><span class="p">.</span><span class="na">isModelTensorFlow2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">       </span><span class="n">tfodParameters</span><span class="p">.</span><span class="na">inputSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">320</span><span class="p">;</span>
+<span class="w">       </span><span class="n">tfod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClassFactory</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">createTFObjectDetector</span><span class="p">(</span><span class="n">tfodParameters</span><span class="p">,</span><span class="w"> </span><span class="n">vuforia</span><span class="p">);</span>
+<span class="w">       </span><span class="n">tfod</span><span class="p">.</span><span class="na">loadModelFromAsset</span><span class="p">(</span><span class="n">TFOD_MODEL_ASSET</span><span class="p">,</span><span class="w"> </span><span class="n">LABELS</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="c1">// end method initTfod()</span>
+
+<span class="p">}</span><span class="w">  </span><span class="c1">//end class</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Adjust white balance temperature, if supported<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><a class="reference download internal" download="" href="../../../../_downloads/d0cbbfbd4dbd5d9f65f55a1bb6159d00/W_WebcamControls_WhiteBalance.java"><code class="xref download docutils literal notranslate"><span class="pre">W_WebcamControls_WhiteBalance.java</span></code></a></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/* </span>
+
+<span class="cm">This example OpMode allows direct gamepad control of white balance temperature,</span>
+<span class="cm">if supported.  It&#39;s a companion to the FTC wiki tutorial on Webcam Controls.</span>
+
+<span class="cm">Put the Driver Station Layout in Landscape mode for this telemetry.</span>
+
+<span class="cm">Add your own Vuforia key, where shown below.</span>
+
+<span class="cm">Questions, comments and corrections to westsiderobotics@verizon.net</span>
+
+<span class="cm">from v01 11/12/21</span>
+<span class="cm"> */</span>
+
+<span class="kn">package</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.teamcode</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.hardware.camera.controls.WhiteBalanceControl</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.LinearOpMode</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.TeleOp</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.ClassFactory</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer</span><span class="p">;</span>
+
+<span class="nd">@TeleOp</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;Webcam Controls - White Balance v01&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Webcam Controls&quot;</span><span class="p">)</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">W_WebcamControls_WhiteBalance_v01</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">LinearOpMode</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">VUFORIA_KEY</span><span class="w"> </span><span class="o">=</span>
+<span class="w">            </span><span class="c1">//&quot;   INSERT YOUR VUFORIA KEY HERE  &quot;;</span>
+<span class="w">            </span>
+<span class="w">    </span><span class="c1">// Class Members</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">VuforiaLocalizer</span><span class="w"> </span><span class="n">vuforia</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">WebcamName</span><span class="w"> </span><span class="n">webcamName</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">WhiteBalanceControl</span><span class="w"> </span><span class="n">myWBControl</span><span class="p">;</span><span class="w">  </span><span class="c1">// declare White Balance Control object</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">minWhiteBalanceTemp</span><span class="p">;</span><span class="w">          </span><span class="c1">// temperature in degrees Kelvin (K)</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">maxWhiteBalanceTemp</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">curWhiteBalanceTemp</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">tempIncrement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">          </span><span class="c1">// for manual gamepad adjustment</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">wasTemperatureSet</span><span class="p">;</span><span class="w">        </span><span class="c1">// did the set() operation succeed?</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">wasWhiteBalanceModeSet</span><span class="p">;</span><span class="w">   </span><span class="c1">// did the setMode() operation succeed?</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">useTempLimits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">runOpMode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">setMsTransmissionInterval</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Connect to the webcam, using exact name per robot Configuration.</span>
+<span class="w">        </span><span class="n">webcamName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">WebcamName</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Webcam 1&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="cm">/*</span>
+<span class="cm">         * Configure Vuforia by creating a Parameter object, and passing it to the Vuforia engine.</span>
+<span class="cm">         * We pass Vuforia the handle to a camera preview resource (on the RC screen).</span>
+<span class="cm">         */</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">cameraMonitorViewId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">appContext</span><span class="p">.</span><span class="na">getResources</span><span class="p">().</span><span class="na">getIdentifier</span><span class="p">(</span><span class="s">&quot;cameraMonitorViewId&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">appContext</span><span class="p">.</span><span class="na">getPackageName</span><span class="p">());</span>
+<span class="w">        </span><span class="n">VuforiaLocalizer</span><span class="p">.</span><span class="na">Parameters</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VuforiaLocalizer</span><span class="p">.</span><span class="na">Parameters</span><span class="p">(</span><span class="n">cameraMonitorViewId</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">parameters</span><span class="p">.</span><span class="na">vuforiaLicenseKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VUFORIA_KEY</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// We also indicate which camera we wish to use.</span>
+<span class="w">        </span><span class="n">parameters</span><span class="p">.</span><span class="na">cameraName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">webcamName</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">//  Set up the Vuforia engine</span>
+<span class="w">        </span><span class="n">vuforia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClassFactory</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">createVuforia</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Assign the white balance control object, to use its methods.</span>
+<span class="w">        </span><span class="n">myWBControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vuforia</span><span class="p">.</span><span class="na">getCamera</span><span class="p">().</span><span class="na">getControl</span><span class="p">(</span><span class="n">WhiteBalanceControl</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// display current white balance mode</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;\nTouch Start arrow to control white balance temperature.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;\nRecommended: put Driver Station Layout in Landscape.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;\nCurrent white balance mode&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myWBControl</span><span class="p">.</span><span class="na">getMode</span><span class="p">());</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+
+
+<span class="w">        </span><span class="n">waitForStart</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// set variable to current actual temperature, if supported</span>
+<span class="w">        </span><span class="n">curWhiteBalanceTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myWBControl</span><span class="p">.</span><span class="na">getWhiteBalanceTemperature</span><span class="p">();</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// get webcam temperature limits, if provided</span>
+<span class="w">        </span><span class="n">minWhiteBalanceTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myWBControl</span><span class="p">.</span><span class="na">getMinWhiteBalanceTemperature</span><span class="p">();</span>
+<span class="w">        </span><span class="n">maxWhiteBalanceTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myWBControl</span><span class="p">.</span><span class="na">getMaxWhiteBalanceTemperature</span><span class="p">();</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Set white balance mode to Manual, for direct control.</span>
+<span class="w">        </span><span class="c1">// A non-default setting may persist in the camera, until changed again.</span>
+<span class="w">        </span><span class="n">wasWhiteBalanceModeSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myWBControl</span><span class="p">.</span><span class="na">setMode</span><span class="p">(</span><span class="n">WhiteBalanceControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">MANUAL</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">opModeIsActive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">            </span><span class="c1">// manually adjust the color temperature variable</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">                  </span><span class="c1">// increase with blue X (cooler)</span>
+<span class="w">                </span><span class="n">curWhiteBalanceTemp</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">tempIncrement</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span><span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">          </span><span class="c1">// decrease with red B (warmer)</span>
+<span class="w">                </span><span class="n">curWhiteBalanceTemp</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">tempIncrement</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">            </span><span class="c1">// ensure inputs are within webcam limits, if provided</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">useTempLimits</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">curWhiteBalanceTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">curWhiteBalanceTemp</span><span class="p">,</span><span class="w"> </span><span class="n">minWhiteBalanceTemp</span><span class="p">);</span>
+<span class="w">                </span><span class="n">curWhiteBalanceTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">curWhiteBalanceTemp</span><span class="p">,</span><span class="w"> </span><span class="n">maxWhiteBalanceTemp</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span>
+
+<span class="w">            </span><span class="c1">// update the color temperature setting</span>
+<span class="w">            </span><span class="n">wasTemperatureSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myWBControl</span><span class="p">.</span><span class="na">setWhiteBalanceTemperature</span><span class="p">(</span><span class="n">curWhiteBalanceTemp</span><span class="p">);</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="c1">// display live feedback while user observes preview image</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;Adjust temperature with blue X (cooler) &amp; red B (warmer)&quot;</span><span class="p">);</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;\nWhite Balance Temperature&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;Min: %d, Max: %d, Actual: %d&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="n">minWhiteBalanceTemp</span><span class="p">,</span><span class="w"> </span><span class="n">maxWhiteBalanceTemp</span><span class="p">,</span>
+<span class="w">                </span><span class="n">myWBControl</span><span class="p">.</span><span class="na">getWhiteBalanceTemperature</span><span class="p">());</span>
+
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;\nProgrammed temperature&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">curWhiteBalanceTemp</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Temperature set OK?&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wasTemperatureSet</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;\nCurrent white balance mode&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myWBControl</span><span class="p">.</span><span class="na">getMode</span><span class="p">());</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;White balance mode set OK?&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wasWhiteBalanceModeSet</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+
+<span class="w">            </span><span class="n">sleep</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+
+<span class="w">        </span><span class="p">}</span><span class="w">   </span><span class="c1">// end main while() loop</span>
+
+<span class="w">    </span><span class="p">}</span><span class="w">    </span><span class="c1">// end OpMode</span>
+
+<span class="p">}</span><span class="w">   </span><span class="c1">// end class</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Adjust focus, if supported<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<blockquote>
+<div><p class="sd-card-text"><a class="reference download internal" download="" href="../../../../_downloads/25ab41ecaf65cec12704b67bc4baee25/W_WebcamControls_Focus.java"><code class="xref download docutils literal notranslate"><span class="pre">W_WebcamControls_Focus.java</span></code></a></p>
+</div></blockquote>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/* </span>
+
+<span class="cm">This example OpMode allows direct gamepad control of webcam focus,</span>
+<span class="cm">if supported.  It&#39;s a companion to the FTC wiki tutorial on Webcam Controls.</span>
+
+<span class="cm">Add your own Vuforia key, where shown below.</span>
+
+<span class="cm">Questions, comments and corrections to westsiderobotics@verizon.net</span>
+
+<span class="cm">from v03 11/10/21</span>
+<span class="cm"> */</span>
+
+<span class="kn">package</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.teamcode</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.hardware.camera.controls.FocusControl</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.OpMode</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.LinearOpMode</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.TeleOp</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.Telemetry</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.ClassFactory</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer</span><span class="p">;</span>
+
+<span class="nd">@TeleOp</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;Webcam Controls - Focus v03&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Webcam Controls&quot;</span><span class="p">)</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">W_WebcamControls_Focus_v03</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">LinearOpMode</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">VUFORIA_KEY</span><span class="w"> </span><span class="o">=</span>
+<span class="w">            </span><span class="s">&quot;   INSERT YOUR VUFORIA KEY HERE  &quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Class Members</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">VuforiaLocalizer</span><span class="w"> </span><span class="n">vuforia</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">WebcamName</span><span class="w"> </span><span class="n">webcamName</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">FocusControl</span><span class="w"> </span><span class="n">myFocusControl</span><span class="p">;</span><span class="w">  </span><span class="c1">// declare Focus Control object</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">minFocus</span><span class="p">;</span><span class="w">              </span><span class="c1">// focus length</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">maxFocus</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">curFocus</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">focusIncrement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">   </span><span class="c1">// for manual gamepad adjustment</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isFocusSupported</span><span class="p">;</span><span class="w">     </span><span class="c1">// does this webcam support getFocusLength()?</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isMinFocusSupported</span><span class="p">;</span><span class="w">  </span><span class="c1">// does this webcam support getMinFocusLength()?</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isMaxFocusSupported</span><span class="p">;</span><span class="w">  </span><span class="c1">// does this webcam support getMaxFocusLength()?</span>
+
+<span class="w">    </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">runOpMode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">setMsTransmissionInterval</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Connect to the webcam, using exact name per robot Configuration.</span>
+<span class="w">        </span><span class="n">webcamName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">WebcamName</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Webcam 1&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="cm">/*</span>
+<span class="cm">         * Configure Vuforia by creating a Parameter object, and passing it to the Vuforia engine.</span>
+<span class="cm">         * We pass Vuforia the handle to a camera preview resource (on the RC screen).</span>
+<span class="cm">         */</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">cameraMonitorViewId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">appContext</span><span class="p">.</span><span class="na">getResources</span><span class="p">().</span><span class="na">getIdentifier</span><span class="p">(</span><span class="s">&quot;cameraMonitorViewId&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">appContext</span><span class="p">.</span><span class="na">getPackageName</span><span class="p">());</span>
+<span class="w">        </span><span class="n">VuforiaLocalizer</span><span class="p">.</span><span class="na">Parameters</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VuforiaLocalizer</span><span class="p">.</span><span class="na">Parameters</span><span class="p">(</span><span class="n">cameraMonitorViewId</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">parameters</span><span class="p">.</span><span class="na">vuforiaLicenseKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VUFORIA_KEY</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// We also indicate which camera we wish to use.</span>
+<span class="w">        </span><span class="n">parameters</span><span class="p">.</span><span class="na">cameraName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">webcamName</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">//  Set up the Vuforia engine</span>
+<span class="w">        </span><span class="n">vuforia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClassFactory</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">createVuforia</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Assign the focus control object, to use its methods.</span>
+<span class="w">        </span><span class="n">myFocusControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vuforia</span><span class="p">.</span><span class="na">getCamera</span><span class="p">().</span><span class="na">getControl</span><span class="p">(</span><span class="n">FocusControl</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// display current Focus Control Mode</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;\nTouch Start arrow to control webcam Focus&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;\nDefault focus mode&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myFocusControl</span><span class="p">.</span><span class="na">getMode</span><span class="p">());</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+
+
+<span class="w">        </span><span class="n">waitForStart</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// set variable to current actual focal length of webcam, if supported</span>
+<span class="w">        </span><span class="n">curFocus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myFocusControl</span><span class="p">.</span><span class="na">getFocusLength</span><span class="p">();</span>
+<span class="w">        </span><span class="n">isFocusSupported</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">curFocus</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">);</span><span class="w">           </span><span class="c1">// false if negative</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">//isFocusSupported = true;  // can activate this line for testing</span>
+
+<span class="w">        </span><span class="c1">// get webcam focal length limits, if provided</span>
+<span class="w">        </span><span class="n">minFocus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myFocusControl</span><span class="p">.</span><span class="na">getMinFocusLength</span><span class="p">();</span>
+<span class="w">        </span><span class="n">isMinFocusSupported</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">minFocus</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">);</span><span class="w">        </span><span class="c1">// false if negative</span>
+
+<span class="w">        </span><span class="n">maxFocus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myFocusControl</span><span class="p">.</span><span class="na">getMaxFocusLength</span><span class="p">();</span>
+<span class="w">        </span><span class="n">isMaxFocusSupported</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">maxFocus</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">);</span><span class="w">        </span><span class="c1">// false if negative</span>
+
+<span class="w">        </span><span class="c1">// A non-default setting may persist in the camera, until changed again.</span>
+<span class="w">        </span><span class="n">myFocusControl</span><span class="p">.</span><span class="na">setMode</span><span class="p">(</span><span class="n">FocusControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">Fixed</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// set initial focus length, if supported</span>
+<span class="w">        </span><span class="n">myFocusControl</span><span class="p">.</span><span class="na">setFocusLength</span><span class="p">(</span><span class="n">curFocus</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">checkFocusModes</span><span class="p">();</span><span class="w">     </span><span class="c1">// display Focus Modes supported by this webcam</span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">opModeIsActive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">            </span><span class="c1">// manually adjust the webcam focus variable</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">right_bumper</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">curFocus</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">focusIncrement</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span><span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">left_bumper</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">curFocus</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">focusIncrement</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">            </span><span class="c1">// ensure inputs are within webcam limits, if provided</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isMinFocusSupported</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">curFocus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">curFocus</span><span class="p">,</span><span class="w"> </span><span class="n">minFocus</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;minFocus not available on this webcam&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isMaxFocusSupported</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">curFocus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">curFocus</span><span class="p">,</span><span class="w"> </span><span class="n">maxFocus</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;maxFocus not available on this webcam&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="c1">// update the webcam&#39;s focus length setting</span>
+<span class="w">            </span><span class="n">myFocusControl</span><span class="p">.</span><span class="na">setFocusLength</span><span class="p">(</span><span class="n">curFocus</span><span class="p">);</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="c1">// display live feedback while user observes preview image</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isFocusSupported</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;Adjust focus length with Left &amp; Right Bumpers&quot;</span><span class="p">);</span>
+
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;\nWebcam properties (negative means not supported)&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Focus Length&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Min: %.1f, Max: %.1f, Actual: %.1f&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">minFocus</span><span class="p">,</span><span class="w"> </span><span class="n">maxFocus</span><span class="p">,</span><span class="w"> </span><span class="n">myFocusControl</span><span class="p">.</span><span class="na">getFocusLength</span><span class="p">());</span>
+
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;\nProgrammed Focus Length&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.1f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">curFocus</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;\nThis webcam does not support adustable focus length.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+
+<span class="w">            </span><span class="n">sleep</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+
+<span class="w">        </span><span class="p">}</span><span class="w">   </span><span class="c1">// end main while() loop</span>
+
+<span class="w">    </span><span class="p">}</span><span class="w">    </span><span class="c1">// end OpMode</span>
+
+
+<span class="w">    </span><span class="c1">// display Focus Modes supported by this webcam</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">checkFocusModes</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">opModeIsActive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;Focus Modes supported by this webcam:&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Auto&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myFocusControl</span><span class="p">.</span><span class="na">isModeSupported</span><span class="p">(</span><span class="n">FocusControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">Auto</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;ContinuousAuto&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myFocusControl</span><span class="p">.</span><span class="na">isModeSupported</span><span class="p">(</span><span class="n">FocusControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">ContinuousAuto</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Fixed&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myFocusControl</span><span class="p">.</span><span class="na">isModeSupported</span><span class="p">(</span><span class="n">FocusControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">Fixed</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Infinity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myFocusControl</span><span class="p">.</span><span class="na">isModeSupported</span><span class="p">(</span><span class="n">FocusControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">Infinity</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Macro&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myFocusControl</span><span class="p">.</span><span class="na">isModeSupported</span><span class="p">(</span><span class="n">FocusControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">Macro</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Unknown&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myFocusControl</span><span class="p">.</span><span class="na">isModeSupported</span><span class="p">(</span><span class="n">FocusControl</span><span class="p">.</span><span class="na">Mode</span><span class="p">.</span><span class="na">Unknown</span><span class="p">));</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;*** PRESS Y TO CONTINUE ***&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span>
+<span class="w">    </span><span class="p">}</span><span class="w">   </span><span class="c1">// end method checkFocusModes()</span>
+
+<span class="p">}</span><span class="w">   </span><span class="c1">// end class</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Adjust virtual pan, tilt and zoom, if supported<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><a class="reference download internal" download="" href="../../../../_downloads/8eff8ee935853b41b3f10af973b10f95/W_WebcamControls_PTZ.java"><code class="xref download docutils literal notranslate"><span class="pre">W_WebcamControls_PTZ.java</span></code></a></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/* </span>
+
+<span class="cm">This example OpMode allows direct gamepad control of webcam virtual pan/tilt/zoom,</span>
+<span class="cm">if supported.  It&#39;s a companion to the FTC wiki tutorial on Webcam Controls.</span>
+
+<span class="cm">Add your own Vuforia key, where shown below.</span>
+
+<span class="cm">Some tested webcams:</span>
+<span class="cm">Logitech C920 responds to all pan/tilt/zoom (PTZ) methods</span>
+<span class="cm">Microsoft LifeCam VX-5000 does support PTZ, with 10 positions each.</span>
+<span class="cm">Logitech C270 (old firmware) does not support PTZ.</span>
+
+<span class="cm">Questions, comments and corrections to westsiderobotics@verizon.net</span>
+
+<span class="cm">from v03 11/11/21</span>
+<span class="cm"> */</span>
+
+<span class="kn">package</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.teamcode</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.hardware.camera.controls.PtzControl</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.Disabled</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.LinearOpMode</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.qualcomm.robotcore.eventloop.opmode.TeleOp</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.ClassFactory</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.Telemetry</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.firstinspires.ftc.robotcore.external.Telemetry.DisplayFormat</span><span class="p">;</span>
+
+
+<span class="nd">@TeleOp</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;Webcam Controls - PTZ v03&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;Webcam Controls&quot;</span><span class="p">)</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">W_WebcamControls_PTZ_v03</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">LinearOpMode</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">VUFORIA_KEY</span><span class="w"> </span><span class="o">=</span>
+<span class="w">            </span><span class="c1">// &quot;  INSERT YOUR VUFORIA KEY HERE   &quot;;</span>
+<span class="w">            </span>
+<span class="w">    </span><span class="c1">// Class Members</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">VuforiaLocalizer</span><span class="w"> </span><span class="n">vuforia</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">WebcamName</span><span class="w"> </span><span class="n">webcamName</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">PtzControl</span><span class="w"> </span><span class="n">myPtzControl</span><span class="p">;</span><span class="w">                </span><span class="c1">// declare PTZ Control object</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">PtzControl</span><span class="p">.</span><span class="na">PanTiltHolder</span><span class="w"> </span><span class="n">minPanTilt</span><span class="p">;</span><span class="w">    </span><span class="c1">// declare Holder for min</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">minPan</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">minTilt</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">PtzControl</span><span class="p">.</span><span class="na">PanTiltHolder</span><span class="w"> </span><span class="n">maxPanTilt</span><span class="p">;</span><span class="w">    </span><span class="c1">// declare Holder for max</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">maxPan</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">maxTilt</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// declare Holder for current; must instantiate to set values</span>
+<span class="w">    </span><span class="n">PtzControl</span><span class="p">.</span><span class="na">PanTiltHolder</span><span class="w"> </span><span class="n">curPanTilt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PtzControl</span><span class="p">.</span><span class="na">PanTiltHolder</span><span class="p">();</span><span class="w">  </span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">curPan</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">curTilt</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">minZoom</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">maxZoom</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">curZoom</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">panIncrement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7200</span><span class="p">;</span><span class="w">        </span><span class="c1">// for manual gamepad control</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">tiltIncrement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7200</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">zoomIncrement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// pan/tilt increment 7200 is for Microsoft LifeCam VX-5000</span>
+<span class="w">    </span><span class="c1">// can use smaller increment for Logitech C920</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">useLimits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">       </span><span class="c1">// use webcam-provided limits</span>
+
+
+<span class="w">    </span><span class="nd">@Override</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">runOpMode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">setMsTransmissionInterval</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Connect to the webcam, using exact name per robot Configuration.</span>
+<span class="w">        </span><span class="n">webcamName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">WebcamName</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Webcam 1&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="cm">/*</span>
+<span class="cm">         * Configure Vuforia by creating a Parameter object, and passing it to the Vuforia engine.</span>
+<span class="cm">         * We pass Vuforia the handle to a camera preview resource (on the RC screen).</span>
+<span class="cm">         */</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">cameraMonitorViewId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">appContext</span><span class="p">.</span><span class="na">getResources</span><span class="p">().</span><span class="na">getIdentifier</span><span class="p">(</span><span class="s">&quot;cameraMonitorViewId&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">appContext</span><span class="p">.</span><span class="na">getPackageName</span><span class="p">());</span>
+<span class="w">        </span><span class="n">VuforiaLocalizer</span><span class="p">.</span><span class="na">Parameters</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VuforiaLocalizer</span><span class="p">.</span><span class="na">Parameters</span><span class="p">(</span><span class="n">cameraMonitorViewId</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">parameters</span><span class="p">.</span><span class="na">vuforiaLicenseKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VUFORIA_KEY</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// We also indicate which camera we wish to use.</span>
+<span class="w">        </span><span class="n">parameters</span><span class="p">.</span><span class="na">cameraName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">webcamName</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Assign the Vuforia engine object</span>
+<span class="w">        </span><span class="n">vuforia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClassFactory</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">createVuforia</span><span class="p">(</span><span class="n">parameters</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Assign the PTZ control object, to use its methods.</span>
+<span class="w">        </span><span class="n">myPtzControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vuforia</span><span class="p">.</span><span class="na">getCamera</span><span class="p">().</span><span class="na">getControl</span><span class="p">(</span><span class="n">PtzControl</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// display current PTZ values to user</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;\nTouch Start arrow to control webcam Pan, Tilt &amp; Zoom (PTZ)&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Get the current properties from the webcam.  May be dummy zeroes.</span>
+<span class="w">        </span><span class="n">curPanTilt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myPtzControl</span><span class="p">.</span><span class="na">getPanTilt</span><span class="p">();</span>
+<span class="w">        </span><span class="n">curPan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curPanTilt</span><span class="p">.</span><span class="na">pan</span><span class="p">;</span>
+<span class="w">        </span><span class="n">curTilt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curPanTilt</span><span class="p">.</span><span class="na">tilt</span><span class="p">;</span>
+<span class="w">        </span><span class="n">curZoom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myPtzControl</span><span class="p">.</span><span class="na">getZoom</span><span class="p">();</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;\nInitial pan value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">curPan</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Initial tilt value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">curTilt</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Initial zoom value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">curZoom</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+
+
+<span class="w">        </span><span class="n">waitForStart</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Get webcam PTZ limits; may be dummy zeroes.</span>
+<span class="w">        </span><span class="n">minPanTilt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myPtzControl</span><span class="p">.</span><span class="na">getMinPanTilt</span><span class="p">();</span>
+<span class="w">        </span><span class="n">minPan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">minPanTilt</span><span class="p">.</span><span class="na">pan</span><span class="p">;</span>
+<span class="w">        </span><span class="n">minTilt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">minPanTilt</span><span class="p">.</span><span class="na">tilt</span><span class="p">;</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">maxPanTilt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myPtzControl</span><span class="p">.</span><span class="na">getMaxPanTilt</span><span class="p">();</span>
+<span class="w">        </span><span class="n">maxPan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maxPanTilt</span><span class="p">.</span><span class="na">pan</span><span class="p">;</span>
+<span class="w">        </span><span class="n">maxTilt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maxPanTilt</span><span class="p">.</span><span class="na">tilt</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">minZoom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myPtzControl</span><span class="p">.</span><span class="na">getMinZoom</span><span class="p">();</span>
+<span class="w">        </span><span class="n">maxZoom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myPtzControl</span><span class="p">.</span><span class="na">getMaxZoom</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">opModeIsActive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">            </span><span class="c1">// manually adjust the webcam PTZ variables</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">dpad_right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">curPan</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">panIncrement</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span><span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">dpad_left</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">curPan</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">panIncrement</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">dpad_up</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">curTilt</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">tiltIncrement</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span><span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">dpad_down</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">curTilt</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">tiltIncrement</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span><span class="w">  </span><span class="c1">//reverse tilt direction for Microsoft LifeCam VX-5000</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">curZoom</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">zoomIncrement</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span><span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">curZoom</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">zoomIncrement</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// ensure inputs are within webcam limits, if provided</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">useLimits</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">curPan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">curPan</span><span class="p">,</span><span class="w"> </span><span class="n">minPan</span><span class="p">);</span>
+<span class="w">                </span><span class="n">curPan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">curPan</span><span class="p">,</span><span class="w"> </span><span class="n">maxPan</span><span class="p">);</span>
+
+<span class="w">                </span><span class="n">curTilt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">curTilt</span><span class="p">,</span><span class="w"> </span><span class="n">minTilt</span><span class="p">);</span>
+<span class="w">                </span><span class="n">curTilt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">curTilt</span><span class="p">,</span><span class="w"> </span><span class="n">maxTilt</span><span class="p">);</span>
+
+<span class="w">                </span><span class="n">curZoom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">curZoom</span><span class="p">,</span><span class="w"> </span><span class="n">minZoom</span><span class="p">);</span>
+<span class="w">                </span><span class="n">curZoom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">curZoom</span><span class="p">,</span><span class="w"> </span><span class="n">maxZoom</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span>
+<span class="w">            </span><span class="c1">// update the webcam&#39;s settings</span>
+<span class="w">            </span><span class="n">curPanTilt</span><span class="p">.</span><span class="na">pan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curPan</span><span class="p">;</span>
+<span class="w">            </span><span class="n">curPanTilt</span><span class="p">.</span><span class="na">tilt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curTilt</span><span class="p">;</span>
+<span class="w">            </span><span class="n">myPtzControl</span><span class="p">.</span><span class="na">setPanTilt</span><span class="p">(</span><span class="n">curPanTilt</span><span class="p">);</span>
+<span class="w">            </span><span class="n">myPtzControl</span><span class="p">.</span><span class="na">setZoom</span><span class="p">(</span><span class="n">curZoom</span><span class="p">);</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="c1">// display live feedback while user observes preview image</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;\nPAN: Dpad up/dn; TILT: Dpad L/R; ZOOM: Y/A&quot;</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addLine</span><span class="p">(</span><span class="s">&quot;\nWebcam properties (zero may mean not supported)&quot;</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Pan&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Min: %d, Max: %d, Actual: %d&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="n">minPan</span><span class="p">,</span><span class="w"> </span><span class="n">maxPan</span><span class="p">,</span><span class="w"> </span><span class="n">myPtzControl</span><span class="p">.</span><span class="na">getPanTilt</span><span class="p">().</span><span class="na">pan</span><span class="p">);</span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Programmed Pan&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">curPan</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;\nTilt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Min: %d, Max: %d, Actual: %d&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="n">minTilt</span><span class="p">,</span><span class="w"> </span><span class="n">maxTilt</span><span class="p">,</span><span class="w"> </span><span class="n">myPtzControl</span><span class="p">.</span><span class="na">getPanTilt</span><span class="p">().</span><span class="na">tilt</span><span class="p">);</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Programmed Tilt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">curTilt</span><span class="p">);</span>
+<span class="w">                </span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;\nZoom&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Min: %d, Max: %d, Actual: %d&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="n">minZoom</span><span class="p">,</span><span class="w"> </span><span class="n">maxZoom</span><span class="p">,</span><span class="w"> </span><span class="n">myPtzControl</span><span class="p">.</span><span class="na">getZoom</span><span class="p">());</span><span class="w">      </span>
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Programmed Zoom&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">curZoom</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">telemetry</span><span class="p">.</span><span class="na">update</span><span class="p">();</span>
+
+<span class="w">            </span><span class="n">sleep</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+
+<span class="w">        </span><span class="p">}</span><span class="w">   </span><span class="c1">// end main while() loop</span>
+
+<span class="w">    </span><span class="p">}</span><span class="w">    </span><span class="c1">// end OpMode</span>
+
+<span class="p">}</span><span class="w">   </span><span class="c1">// end class</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../eval/eval.html" class="btn btn-neutral float-left" title="Evaluating Your Webcam" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../camera_calibration/camera-calibration.html" class="btn btn-neutral float-right" title="Camera Calibration for FIRST Tech Challenge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a href="../../../../tos/tos.html">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

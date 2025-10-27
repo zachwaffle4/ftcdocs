@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+ <meta name="google-site-verification" content="75RBwHq1pWFvK2E7wuVgAeq_LOOJrU4q1wRIjXqPpqg" />  <!-- Google Analytics Intentionally Disabled -->  <!-- Cookie Banner Intentionally Disabled --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Custom Model Sample OpMode for TFOD &mdash; FIRST Tech Challenge Docs 0.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ftc-rtd.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/FIRSTicon_RGB_withTM.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/hoverxref.js"></script>
+        <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../../_static/js/micromodal.min.js"></script>
+        <script src="../../../_static/js/external-links-new-tab.js"></script>
+        <script src="../../../_static/js/adjust-css-vars.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../../_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Computer Vision Overview" href="../vision_overview/vision-overview.html" />
+    <link rel="prev" title="Java Easy Sample OpMode for TFOD" href="../java_tfod_opmode/java-tfod-opmode.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+
+
+<div class="header-bar">
+        <!-- Color Strip -->
+        <div class="color-strip">
+            <div class="fred"></div>
+            <div class="forange"></div>
+            <div class="fblue"></div>
+        </div>
+        <div class="link-bar-container">
+            <div id="link-bar" class="collapse">
+                <ul>          
+			<li id="ftc-page-link"><a href="https://www.firstinspires.org/resource-library/ftc/game-and-season-info" target="_blank"><i>FIRST</i> Official Team Resources</a></li>
+                  <li id="qa-link"><a href="https://ftc-qa.firstinspires.org/" target="_blank">Official Game Q&A</a></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            FIRST Tech Challenge Docs
+              <img src="../../../_static/FIRSTTech_iconHorz_RGB_reverse.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/ftcoverview.html">About the <em>FIRST</em> Tech Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gracious_professionalism/gp.html"><em>Gracious Professionalism®</em></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/rookie_teams/rookie_teams.html">New Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/veteran_teams/veteran_teams.html">Returning Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/coach_admin/coach_admin.html">Coach (Administrative) Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../persona_pages/mentor_tech/mentor_tech.html">Technical Mentor Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game and Season-Specific Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/blog/blog.html"><em>FIRST</em> Tech Challenge Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tech_tips/tech-tips.html"><em>FIRST</em> Tech Challenge Tech Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai/innovation_corner/innovation-corner.html">AI Innovation Corner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manuals/game_manuals/game_manuals.html">Competition Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/ftcqa/ftcqa.html">Game Q&amp;A System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/playing_field_resources/playing_field_resources.html">Playing Field Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_specific_resources/field_coordinate_system/field-coordinate-system.html">Field Coordinate System</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Development Kit (SDK)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../laptops/laptops.html">Laptop Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/overview/index.html">SDK Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_sdk/updating/index.html">Updating Components</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Control System Resources</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shared/control_system_intro/The-FTC-Control-System.html">Control System Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../control_hard_compon/index.html">Hardware Component Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/index.html">Hardware and Software Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/new-self-inspect.html"><em>FIRST</em> Tech Challenge Self-Inspect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/self_inspect/self-inspect.html">Old Self-Inspect</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Programming Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#programming-tutorials">Programming Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#supporting-documentation">Supporting Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#apriltag-programming">AprilTag Programming</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#tensorflow-programming">TensorFlow Programming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../tensorflow_cs_2023/tensorflow-cs-2023.html">TensorFlow for CENTERSTAGE presented by RTX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tensorflow_pp_2022/tensorflow_pp_2022.html">TensorFlow for POWERPLAY presented by Raytheon Technologies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tensorflow_ff_2021/tensorflow-ff-2021.html">TensorFlow for FREIGHT FRENZY presented by Raytheon Technologies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blocks_tfod_opmode/blocks-tfod-opmode.html">Blocks Sample OpMode for TFOD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blocks_tfod_opmode_custom/blocks-tfod-opmode-custom.html">Blocks Custom Model Sample OpMode for TFOD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../java_tfod_opmode/java-tfod-opmode.html">Java Easy Sample OpMode for TFOD</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Java Custom Model Sample OpMode for TFOD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-the-opmode">Creating the OpMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#preliminary-testing">Preliminary Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#downloading-the-model">Downloading the Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#uploading-to-the-robot-controller">Uploading to the Robot Controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#basic-opmode-settings">Basic OpMode Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#testing-with-custom-model">Testing with Custom Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#program-logic-and-initialization">Program Logic and Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#telemetry-method">Telemetry Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resource-management">Resource Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adjusting-the-zoom-factor">Adjusting the Zoom Factor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-adjustments">Other Adjustments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modifying-the-sample">Modifying the Sample</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#vision-programming">Vision Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#camera-color-processing">Camera Color Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#advanced-topics">Advanced Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#java-tutorials">Java Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#additional-first-website-resources">Additional <em>FIRST</em> Website Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programming Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../shared/choosing_program_lang/choosing-program-lang.html">Choosing a Programming Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../blocks/Blocks-Tutorial.html">Blocks Programming Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../onbot_java/OnBot-Java-Tutorial.html">OnBot Java Programming Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../android_studio_java/Android-Studio-Tutorial.html">Android Studio Programming Tutorial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">AprilTag Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/apriltag_intro/apriltag-intro.html">AprilTag Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_overview/visionportal-overview.html">VisionPortal Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/visionportal_webcams/visionportal-webcams.html">Webcams for VisionPortal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values.html">Understanding AprilTag Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/vision_portal/apriltag_localization/apriltag-localization.html">AprilTag Localization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../apriltag/opmode_test_images/opmode-test-images.html">AprilTag Test Images</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CAD Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cad_resources/index.html">Computer Aided Design (CAD)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Electrostatic Discharge</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../hardware_and_software_configuration/configuring/managing_esd/managing-esd.html">Managing ESD Effects</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Manufacturing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manufacturing/index.html">Manufacturing Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Team Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/faqs.html">Common Team FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/software/software.html">Team Complimentary Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sponsors/discounts/discounts.html">Team Discounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FTC Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../booklets/index.html">Booklets</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ftc_docs/form/form.html">Site Feedback Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contrib/index.html">Contributing to FTC Docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FIRST Tech Challenge Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Programming Resources</a></li>
+      <li class="breadcrumb-item active">Java Custom Model Sample OpMode for TFOD</li>
+<li class="wy-breadcrumbs-aside" style="padding-inline-start: 6px;">
+</li>
+
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/programming_resources/vision/java_tfod_opmode_custom/java-tfod-opmode-custom.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="java-custom-model-sample-opmode-for-tfod">
+<h1>Java Custom Model Sample OpMode for TFOD<a class="headerlink" href="#java-custom-model-sample-opmode-for-tfod" title="Permalink to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p>This tutorial describes the regular, or <strong>Builder</strong>, version of the FTC
+Java <strong>Sample OpMode</strong> for TensorFlow Object Detection (TFOD).</p>
+<p>This Sample, called <strong>“ConceptTensorFlowObjectDetection.java”</strong>, can
+recognize <strong>official or custom</strong> FTC game elements and provide their
+visible size and position. It uses the Java <strong>Builder pattern</strong> to
+customize standard/default TFOD settings.</p>
+<p>This is <strong>not the same</strong> as the “Easy” version, which uses only default
+settings and official/built-in TFOD model(s), described here:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../java_tfod_opmode/java-tfod-opmode.html"><span class="doc">Java Easy Sample OpMode for TFOD</span></a></p></li>
+</ul>
+<p>For the 2023-2024 game CENTERSTAGE, the official game element is a
+hexagonal white <strong>Pixel</strong>. The FTC SDK software contains a TFOD model of
+this object, ready for recognition.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/010-TFOD-recognition1.png"><img alt="TFOD Recognition" src="../../../_images/010-TFOD-recognition1.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Example Pixel Recognition using TFOD</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>For extra points, FTC teams may instead use their own custom TFOD models
+of game elements, called <strong>Team Props</strong> in CENTERSTAGE.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/020-team-props.png"><img alt="Team Props" src="../../../_images/020-team-props.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Example Team Props</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>This tutorial shows <strong>OnBot Java</strong> screens. Users of <strong>Android Studio</strong>
+can follow along with a few noted exceptions, since the Sample OpMode is
+exactly the same.</p>
+</section>
+<section id="creating-the-opmode">
+<h2>Creating the OpMode<a class="headerlink" href="#creating-the-opmode" title="Permalink to this heading"></a></h2>
+<p>At the FTC <strong>OnBot Java</strong> browser interface, click on the large black
+<strong>plus-sign icon</strong> “Add File”, to open the New File dialog box.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/100-New-File.png"><img alt="New File Dialog" src="../../../_images/100-New-File.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Example New File Dialog</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Specify a name for your new OpMode. Select
+<strong>“ConceptTensorFlowObjectDetection”</strong> as the Sample OpMode to be the
+template for your new OpMode.</p>
+<p>This Sample has optional gamepad inputs, so it could be designated as a
+<strong>TeleOp</strong> OpMode (see green oval above).</p>
+<p>Click “OK” to create your new OpMode.</p>
+<p><strong>Android Studio</strong> users should follow the commented instructions to
+copy this class from the Samples folder to the Teamcode folder, with a
+new name. Also remove the <code class="docutils literal notranslate"><span class="pre">&#64;Disabled</span></code> annotation, to make the OpMode
+visible in the Driver Station list.</p>
+<p>The new OpMode should appear in the editing window of OnBot Java.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../../_images/110-Sample-Open.png"><img alt="Sample Open Dialog" src="../../../_images/110-Sample-Open.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample Open Dialog</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>By default, the Sample OpMode assumes you are using a webcam, configured
+as “Webcam 1”. If instead you are using the built-in camera on your
+Android RC phone, change the USE_WEBCAM Boolean from <code class="docutils literal notranslate"><span class="pre">true</span></code> to
+<code class="docutils literal notranslate"><span class="pre">false</span></code> (orange oval above).</p>
+</section>
+<section id="preliminary-testing">
+<h2>Preliminary Testing<a class="headerlink" href="#preliminary-testing" title="Permalink to this heading"></a></h2>
+<p>This Sample OpMode is <strong>ready to use</strong>, for detecting the
+default/built-in model (white Pixel for CENTERSTAGE).</p>
+<p>If <strong>Android Studio</strong> users get a DS error message “Loading model from
+asset failed”, skip to the next section “Downloading the Model”.</p>
+<p>Click the “Build Everything” button (wrench icon at lower right), and
+wait for confirmation “BUILD SUCCESSFUL”.</p>
+<p>If Build is prevented by some other OpMode having errors/issues, they
+must be fixed before your new OpMode can run. For a quick fix, you could
+right-click on that filename and choose “Disable/Comment”. This
+“comments out” all lines of code, effectively removing that file from
+the Build. That file can be re-activated later with “Enable/Uncomment”.</p>
+<p>In Android Studio (or OnBot Java), you can open a problem class/OpMode
+and type <strong>CTRL-A</strong> and <strong>CTRL-/</strong> to select and “comment out” all lines
+of code. This is reversible with <strong>CTRL-A</strong> and <strong>CTRL-/</strong> again.</p>
+<p>Now run your new OpMode from the Driver Station (in the TeleOp list, if
+so designated). The OpMode should recognize any CENTERSTAGE white Pixel
+within the camera’s view, based on the trained TFOD model.</p>
+<p>For a <strong>preview</strong> during the INIT phase, touch the Driver Station’s
+3-dot menu and select <strong>Camera Stream</strong>.</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../../_images/200-Sample-DS-Camera-Stream2.png"><img alt="Sample DS Camera Stream" src="../../../_images/200-Sample-DS-Camera-Stream2.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample DS Camera Stream</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Camera Stream is not live video; tap to refresh the image. Use the small
+white arrows at bottom right to expand or revert the preview size. To
+close the preview, choose 3-dots and Camera Stream again.</p>
+<p>After the DS START button is touched, the OpMode displays Telemetry for
+any recognized Pixel(s):</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../../_images/210-Sample-DS-Telemetry2.png"><img alt="Sample DS Telemetry" src="../../../_images/210-Sample-DS-Telemetry2.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample DS Telemetry</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The above Telemetry shows the Label name, and TFOD recognition
+confidence level. It also gives the <strong>center location</strong> and <strong>size</strong> (in
+pixels) of the Bounding Box, which is the colored rectangle surrounding
+the recognized object.</p>
+<p>The pixel origin (0, 0) is at the top left corner of the image.</p>
+<p>Before and after DS START is touched, the Robot Controller provides a
+video preview called <strong>LiveView</strong>.</p>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../../_images/240-Sample-RC-LiveView2.png"><img alt="Sample RC LiveView" src="../../../_images/240-Sample-RC-LiveView2.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample RC LiveView</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>For Control Hub (with no built-in screen), plug in an HDMI monitor or
+learn about <code class="docutils literal notranslate"><span class="pre">scrcpy</span></code> (<a class="reference external" href="https://github.com/Genymobile/scrcpy">https://github.com/Genymobile/scrcpy</a>). The
+above image is a LiveView screenshot via <code class="docutils literal notranslate"><span class="pre">scrcpy</span></code>.</p>
+<p>If you don’t have a physical Pixel on hand, try pointing the camera at
+this image:</p>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../../../_images/300-Sample-Pixel2.png"><img alt="Sample Pixel" src="../../../_images/300-Sample-Pixel2.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample Pixel</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Congratulations!</strong> At this point the Sample OpMode and your camera
+are working properly. Ready for a custom model?</p>
+</section>
+<section id="downloading-the-model">
+<h2>Downloading the Model<a class="headerlink" href="#downloading-the-model" title="Permalink to this heading"></a></h2>
+<p>Now we describe how to load a trained inference model in the form of a
+TensorFlow Lite (<code class="docutils literal notranslate"><span class="pre">.tflite</span></code>) file.</p>
+<p>Instead of an <strong>actual custom model</strong>, here we use the standard FTC
+model of the white Pixel from CENTERSTAGE (2023-2024). Later, your team
+will follow this <strong>same process</strong> with your custom TFOD model,
+specifying its filename and labels (objects to recognize).</p>
+<p>The standard <code class="docutils literal notranslate"><span class="pre">.tflite</span></code> file (white Pixel) is available on GitHub at
+the following link:</p>
+<ul class="simple">
+<li><p>CENTERSTAGE TFLite File (<a class="reference external" href="https://github.com/FIRST-Tech-Challenge/WikiSupport/blob/master/tensorflow/CenterStage.tflite">https://github.com/FIRST-Tech-Challenge/WikiSupport/blob/master/tensorflow/CenterStage.tflite</a>)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Very advanced teams could use Google’s TensorFlow Object Detection
+API (<a class="reference external" href="https://github.com/tensorflow/models/tree/master/research/object_detection">https://github.com/tensorflow/models/tree/master/research/object_detection</a>)
+to create their own custom inference model.</p>
+</div>
+<p>Click the “Download Raw File” button to download the
+<code class="docutils literal notranslate"><span class="pre">CenterStage.tflite</span></code> file from GitHub to your local device
+(e.g. laptop). See the green arrow.</p>
+<figure class="align-center" id="id9">
+<a class="reference internal image-reference" href="../../../_images/030-Centerstage-public-repo.png"><img alt="Public Repo" src="../../../_images/030-Centerstage-public-repo.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Public Repo</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="uploading-to-the-robot-controller">
+<h2>Uploading to the Robot Controller<a class="headerlink" href="#uploading-to-the-robot-controller" title="Permalink to this heading"></a></h2>
+<p>Next, OnBot Java users will upload the TFOD model to the Robot
+Controller. Connect your laptop to your Robot Controller’s wireless
+network, open the Chrome browser, and navigate to the FTC “Manage” page:</p>
+<figure class="align-center" id="id10">
+<a class="reference internal image-reference" href="../../../_images/040-Manage-page.png"><img alt="RC Manage Page" src="../../../_images/040-Manage-page.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Robot Controller Manage Page</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Android Studio</strong> users should instead skip to the instructions at
+the bottom of this section.</p>
+<p>Scroll down and click on “Manage TensorFlow Lite Models”.</p>
+<figure class="align-center" id="id11">
+<a class="reference internal image-reference" href="../../../_images/050-Manage-TFLite-Models.png"><img alt="TensorFlow Lite Model Management" src="../../../_images/050-Manage-TFLite-Models.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">TensorFlow Lite Model Management</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Now click the “Upload Models” button.</p>
+<figure class="align-center" id="id12">
+<a class="reference internal image-reference" href="../../../_images/060-Upload-Models.png"><img alt="Uploading Models" src="../../../_images/060-Upload-Models.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Upload Models</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Click “Choose Files”, and use the dialog box to find and select the
+downloaded <code class="docutils literal notranslate"><span class="pre">CenterStage.tflite</span></code> file.</p>
+<figure class="align-center" id="id13">
+<a class="reference internal image-reference" href="../../../_images/070-Choose-Files.png"><img alt="Choose Files" src="../../../_images/070-Choose-Files.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Choose Files</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Now the file will upload to the Robot Controller. The file will appear
+in the list of TensorFlow models available for use in OpModes.</p>
+<figure class="align-center" id="id14">
+<a class="reference internal image-reference" href="../../../_images/080-Centerstage-tflite.png"><img alt="CenterStage TFLITE Uploaded" src="../../../_images/080-Centerstage-tflite.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">CENTERSTAGE TFLITE File Uploaded</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Android Studio</strong> users should instead store the TFOD model in the
+project <strong>assets</strong> folder. At the left side, look under
+<code class="docutils literal notranslate"><span class="pre">FtcRobotController</span></code> for the folder <code class="docutils literal notranslate"><span class="pre">assets</span></code>. If it’s missing,
+right-click <code class="docutils literal notranslate"><span class="pre">FtcRobotController</span></code>, choose <code class="docutils literal notranslate"><span class="pre">New</span></code>, <code class="docutils literal notranslate"><span class="pre">Directory</span></code> and
+<code class="docutils literal notranslate"><span class="pre">src\main\assets</span></code>. Right-click <code class="docutils literal notranslate"><span class="pre">assets</span></code>, choose <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">In</span></code> and
+<code class="docutils literal notranslate"><span class="pre">Explorer</span></code>, then copy/paste your <code class="docutils literal notranslate"><span class="pre">.tflite</span></code> file into that assets
+folder.</p>
+</section>
+<section id="basic-opmode-settings">
+<h2>Basic OpMode Settings<a class="headerlink" href="#basic-opmode-settings" title="Permalink to this heading"></a></h2>
+<p>This Sample OpMode can now be modified, to detect the uploaded TFOD
+model.</p>
+<p>Again, this tutorial uploaded the standard TFOD model (white Pixel for
+CENTERSTAGE), just to demonstrate the process. Use the same steps for
+your custom TFOD model.</p>
+<p>First, change the filename here:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">TFOD_MODEL_FILE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/sdcard/FIRST/tflitemodels/myCustomModel.tflite&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>to this:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">TFOD_MODEL_FILE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/sdcard/FIRST/tflitemodels/CenterStage.tflite&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Later, you can change this filename back to the actual name of your
+custom TFOD model. Here we are using the default (white Pixel) model
+just downloaded.</p>
+<hr class="docutils" />
+<p><strong>Android Studio</strong> users should instead verify or store the TFOD model
+in the project <strong>assets</strong> folder as noted above, and use:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">TFOD_MODEL_ASSET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;CenterStage.tflite&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>OR (for a custom model)</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">TFOD_MODEL_ASSET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MyModelStoredAsAsset.tflite&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>For this example, the following line <strong>does not</strong> need to be changed:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Define the labels recognized in the model for TFOD (must be in training order!)</span>
+<span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">LABELS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="s">&quot;Pixel&quot;</span><span class="p">,</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>… because “Pixel” is the correct and only TFOD Label in the standard
+model file.</p>
+<p>Later, you might have custom Labels like “myRedProp” and “myBlueProp”
+(for CENTERSTAGE). The list should be in alphabetical order and contain
+the labels in the dataset(s) used to make the TFOD model.</p>
+<hr class="docutils" />
+<p>Next, scroll down to the Java method <code class="docutils literal notranslate"><span class="pre">initTfod()</span></code>.</p>
+<p>Here is the Java <strong>Builder pattern</strong>, used to specify various settings
+for the TFOD Processor.</p>
+<figure class="align-center" id="id15">
+<a class="reference internal image-reference" href="../../../_images/140-Builder-settings.png"><img alt="Builder Pattern Settings" src="../../../_images/140-Builder-settings.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Builder Pattern Settings</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The <strong>yellow ovals</strong> indicate its distinctive features: <strong>create</strong> the
+Processor object with <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Builder()</span></code>, and <strong>close/finalize</strong> with the
+<code class="docutils literal notranslate"><span class="pre">.build()</span></code> method.</p>
+<p>This is the streamlined version of the Builder pattern. Notice all the
+<code class="docutils literal notranslate"><span class="pre">.set</span></code> methods are “chained” to form a single Java expression, ending
+with a semicolon after <code class="docutils literal notranslate"><span class="pre">.build()</span></code>.</p>
+<p>Uncomment two Builder lines, circled above in green:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="na">setModelFileName</span><span class="p">(</span><span class="n">TFOD_MODEL_FILE</span><span class="p">)</span>
+<span class="p">.</span><span class="na">setModelLabels</span><span class="p">(</span><span class="n">LABELS</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Android Studio</strong> users should instead uncomment the lines
+<code class="docutils literal notranslate"><span class="pre">.setModelAssetName(TFOD_MODEL_ASSET)</span></code> and
+<code class="docutils literal notranslate"><span class="pre">.setModelLabels(LABELS)</span></code>.</p>
+<p>These Builder settings tell the TFOD Processor which model and labels to
+use for evaluating camera frames.</p>
+<p><strong>That’s it!</strong> You are ready to test this Sample OpMode again, this
+time using a “custom” (uploaded) TFOD model.</p>
+</section>
+<section id="testing-with-custom-model">
+<h2>Testing with Custom Model<a class="headerlink" href="#testing-with-custom-model" title="Permalink to this heading"></a></h2>
+<p>In OnBot Java, click the “Build Everything” button (wrench icon at lower
+right), and wait for confirmation “BUILD SUCCESSFUL”.</p>
+<p>Now run your updated OpMode from the Driver Station. The OpMode should
+recognize objects within the camera’s view, based on the trained TFOD
+model.</p>
+<p>Test the <strong>Camera Stream</strong> preview during the INIT phase.</p>
+<figure class="align-center" id="id16">
+<a class="reference internal image-reference" href="../../../_images/200-Sample-DS-Camera-Stream2.png"><img alt="Sample DS Camera Stream" src="../../../_images/200-Sample-DS-Camera-Stream2.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample DS Camera Stream</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Tap to refresh the image. Expand or revert the preview size as needed.
+Close the preview, with 3-dots and Camera Stream again.</p>
+<p>After the DS START button is touched, the OpMode displays Telemetry for
+any recognized object(s):</p>
+<figure class="align-center" id="id17">
+<a class="reference internal image-reference" href="../../../_images/210-Sample-DS-Telemetry2.png"><img alt="Sample DS Telemetry" src="../../../_images/210-Sample-DS-Telemetry2.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample DS Telemetry</span><a class="headerlink" href="#id17" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The above Telemetry shows the Label name, and TFOD recognition
+confidence level. It also gives the <strong>center location</strong> and <strong>size</strong> (in
+pixels) of the Bounding Box, which is the colored rectangle surrounding
+the recognized object.</p>
+<p>Also test the RC’s video <strong>LiveView</strong>, using HDMI or
+<code class="docutils literal notranslate"><span class="pre">scrcpy</span></code> (<a class="reference external" href="https://github.com/Genymobile/scrcpy">https://github.com/Genymobile/scrcpy</a>):</p>
+<figure class="align-center" id="id18">
+<a class="reference internal image-reference" href="../../../_images/240-Sample-RC-LiveView2.png"><img alt="Sample RC LiveView" src="../../../_images/240-Sample-RC-LiveView2.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample RC LiveView</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>For a large view of this standard model, right-click the image to open
+in a new browser tab:</p>
+<figure class="align-center" id="id19">
+<a class="reference internal image-reference" href="../../../_images/300-Sample-Pixel2.png"><img alt="Sample Pixel" src="../../../_images/300-Sample-Pixel2.png" style="width: 85%;" /></a>
+<figcaption>
+<p><span class="caption-text">Sample Pixel</span><a class="headerlink" href="#id19" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>When your team creates, uploads and specifies a custom model containing
+<strong>red and blue Team Props</strong>, the OpMode will recognize and process those
+– instead of the standard model shown here.</p>
+</section>
+<section id="program-logic-and-initialization">
+<h2>Program Logic and Initialization<a class="headerlink" href="#program-logic-and-initialization" title="Permalink to this heading"></a></h2>
+<p>How does this simple OpMode work?</p>
+<ul class="simple">
+<li><p>During the INIT stage (before DS START is touched), this OpMode calls
+a <strong>method to initialize</strong> the TFOD Processor and the FTC
+VisionPortal.</p></li>
+<li><p>After DS START is touched, the OpMode runs a continuous loop, calling
+a <strong>method to display telemetry</strong> about any TFOD recognitions.</p></li>
+<li><p>The OpMode also contains optional features to remind teams about
+<strong>CPU resource management</strong>, useful in vision processing.</p></li>
+</ul>
+<p>You’ve already seen the first part of the method <code class="docutils literal notranslate"><span class="pre">initTfod()</span></code> which
+uses a streamlined, or “chained”, sequence of Builder commands to create
+the TFOD Processor.</p>
+<p>The second part of that method uses regular, non-chained, Builder
+commands to create the VisionPortal.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create the vision portal by using a builder.</span>
+<span class="n">VisionPortal</span><span class="p">.</span><span class="na">Builder</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VisionPortal</span><span class="p">.</span><span class="na">Builder</span><span class="p">();</span>
+
+<span class="c1">// Set the camera (webcam vs. built-in RC phone camera).</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">USE_WEBCAM</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">builder</span><span class="p">.</span><span class="na">setCamera</span><span class="p">(</span><span class="n">hardwareMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">WebcamName</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Webcam 1&quot;</span><span class="p">));</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">builder</span><span class="p">.</span><span class="na">setCamera</span><span class="p">(</span><span class="n">BuiltinCameraDirection</span><span class="p">.</span><span class="na">BACK</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Choose a camera resolution. Not all cameras support all resolutions.</span>
+<span class="n">builder</span><span class="p">.</span><span class="na">setCameraResolution</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Size</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">));</span>
+
+<span class="c1">// Enable the RC preview (LiveView).  Set &quot;false&quot; to omit camera monitoring.</span>
+<span class="n">builder</span><span class="p">.</span><span class="na">enableLiveView</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">// Set the stream format; MJPEG uses less bandwidth than default YUY2.</span>
+<span class="n">builder</span><span class="p">.</span><span class="na">setStreamFormat</span><span class="p">(</span><span class="n">VisionPortal</span><span class="p">.</span><span class="na">StreamFormat</span><span class="p">.</span><span class="na">YUY2</span><span class="p">);</span>
+
+<span class="c1">// Choose whether or not LiveView stops if no processors are enabled.</span>
+<span class="c1">// If set &quot;true&quot;, monitor shows solid orange screen if no processors enabled.</span>
+<span class="c1">// If set &quot;false&quot;, monitor shows camera view without annotations.</span>
+<span class="n">builder</span><span class="p">.</span><span class="na">setAutoStopLiveView</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+
+<span class="c1">// Set and enable the processor.</span>
+<span class="n">builder</span><span class="p">.</span><span class="na">addProcessor</span><span class="p">(</span><span class="n">tfod</span><span class="p">);</span>
+
+<span class="c1">// Build the Vision Portal, using the above settings.</span>
+<span class="n">visionPortal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>All settings have been uncommented here, to see them more easily.</p>
+<p>Here the <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Builder()</span></code> creates a separate <code class="docutils literal notranslate"><span class="pre">VisionPortal.Builder</span></code>
+object called <code class="docutils literal notranslate"><span class="pre">builder</span></code>, allowing traditional/individual Java method
+calls for each setting. For the streamlined “chained” TFOD process, the
+<code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Builder()</span></code> operated directly on the TFOD Processor called
+<code class="docutils literal notranslate"><span class="pre">tfod</span></code>, without creating a <code class="docutils literal notranslate"><span class="pre">TfodProcessor.Builder</span></code> object. Both
+approaches are valid.</p>
+<p>Notice the process again <strong>closes</strong> with a call to the <code class="docutils literal notranslate"><span class="pre">.build()</span></code>
+method.</p>
+</section>
+<section id="telemetry-method">
+<h2>Telemetry Method<a class="headerlink" href="#telemetry-method" title="Permalink to this heading"></a></h2>
+<p>After DS START is touched, the OpMode continuously calls this method to
+display telemetry about any TFOD recognitions:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm">  * Add telemetry about TensorFlow Object Detection (TFOD) recognitions.</span>
+<span class="cm">  */</span>
+<span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">telemetryTfod</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Recognition</span><span class="o">&gt;</span><span class="w"> </span><span class="n">currentRecognitions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tfod</span><span class="p">.</span><span class="na">getRecognitions</span><span class="p">();</span>
+<span class="w">    </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;# Objects Detected&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">currentRecognitions</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+
+<span class="w">    </span><span class="c1">// Step through the list of recognitions and display info for each one.</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Recognition</span><span class="w"> </span><span class="n">recognition</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">currentRecognitions</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">recognition</span><span class="p">.</span><span class="na">getLeft</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">recognition</span><span class="p">.</span><span class="na">getRight</span><span class="p">())</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">recognition</span><span class="p">.</span><span class="na">getTop</span><span class="p">()</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="n">recognition</span><span class="p">.</span><span class="na">getBottom</span><span class="p">())</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;Image&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%s (%.0f %% Conf.)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">recognition</span><span class="p">.</span><span class="na">getLabel</span><span class="p">(),</span><span class="w"> </span><span class="n">recognition</span><span class="p">.</span><span class="na">getConfidence</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;- Position&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.0f / %.0f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="w">        </span><span class="n">telemetry</span><span class="p">.</span><span class="na">addData</span><span class="p">(</span><span class="s">&quot;- Size&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%.0f x %.0f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">recognition</span><span class="p">.</span><span class="na">getWidth</span><span class="p">(),</span><span class="w"> </span><span class="n">recognition</span><span class="p">.</span><span class="na">getHeight</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span><span class="w">   </span><span class="c1">// end for() loop</span>
+
+<span class="p">}</span><span class="w">   </span><span class="c1">// end method telemetryTfod()</span>
+</pre></div>
+</div>
+<p>In the first line of code, <strong>all TFOD recognitions</strong> are collected and
+stored in a List variable. The camera might “see” more than one game
+element in its field of view, even if not intended (i.e. for CENTERSTAGE
+with 1 game element).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">for()</span> <span class="pre">loop</span></code> then iterates through that List, handling each item,
+one at a time. Here the “handling” is simply processing certain TFOD
+fields for DS Telemetry.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">for()</span> <span class="pre">loop</span></code> calculates the pixel coordinates of the <strong>center</strong> of
+each Bounding Box (the preview’s colored rectangle around a recognized
+object).</p>
+<p>Telemetry is created for the Driver Station, with the object’s name
+(Label), recognition confidence level (percentage), and the Bounding
+Box’s location and size (in pixels).</p>
+<p>For competition, you want to do more than display Telemetry, and you
+want to exit the main OpMode loop at some point. These code
+modifications are discussed in another section below.</p>
+</section>
+<section id="resource-management">
+<h2>Resource Management<a class="headerlink" href="#resource-management" title="Permalink to this heading"></a></h2>
+<p>Vision processing is “expensive”, using much <strong>CPU capacity and USB
+bandwidth</strong> to process millions of pixels streaming in from the camera.</p>
+<p>This Sample OpMode contains three optional features to remind teams
+about resource management. Overall, the SDK provides
+<a class="reference internal" href="../../../apriltag/vision_portal/visionportal_cpu_and_bandwidth/visionportal-cpu-and-bandwidth.html#visionportal-cpu-and-bandwidth"><span class="std std-ref">over 10 tools</span></a>
+to manage these resources, allowing your OpMode to run effectively.</p>
+<p>As the first example, <strong>streaming images</strong> from the camera can be paused
+and resumed. This is a very fast transition, freeing CPU resources (and
+potentially USB bandwidth).</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Save CPU resources; can resume streaming when needed.</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">dpad_down</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">visionPortal</span><span class="p">.</span><span class="na">stopStreaming</span><span class="p">();</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">gamepad1</span><span class="p">.</span><span class="na">dpad_up</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">visionPortal</span><span class="p">.</span><span class="na">resumeStreaming</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Pressing the Dpad buttons, you can observe the off-and-on actions in the
+RC preview (LiveView), described above. In your competition OpMode,
+these streaming actions would be programmed, not manually controlled.</p>
+<hr class="docutils" />
+<p>The second example, commented out, similarly allows a vision processor
+(TFOD and/or AprilTag) to be disabled and re-enabled:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//Disable or re-enable the TFOD processor at any time.</span>
+<span class="n">visionPortal</span><span class="p">.</span><span class="na">setProcessorEnabled</span><span class="p">(</span><span class="n">tfod</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Simply set the Boolean to <code class="docutils literal notranslate"><span class="pre">false</span></code> (to disable), or <code class="docutils literal notranslate"><span class="pre">true</span></code> (to
+re-enable).</p>
+<hr class="docutils" />
+<p>The third example: after exiting the main loop, the VisionPortal is
+closed.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Save more CPU resources when camera is no longer needed.</span>
+<span class="n">visionPortal</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Teams may consider this at any point when the VisionPortal is no longer
+needed by the OpMode, freeing valuable CPU resources for other tasks.</p>
+</section>
+<section id="adjusting-the-zoom-factor">
+<h2>Adjusting the Zoom Factor<a class="headerlink" href="#adjusting-the-zoom-factor" title="Permalink to this heading"></a></h2>
+<p>If the object to be recognized will be more than roughly 2 feet (61 cm)
+from the camera, you might want to set the digital Zoom factor to a
+value greater than 1. This tells TensorFlow to use an artificially
+magnified portion of the image, which may offer more accurate
+recognitions at greater distances.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Indicate that only the zoomed center area of each</span>
+<span class="c1">// image will be passed to the TensorFlow object</span>
+<span class="c1">// detector. For no zooming, set magnification to 1.0.</span>
+<span class="n">tfod</span><span class="p">.</span><span class="na">setZoom</span><span class="p">(</span><span class="mf">2.0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This <code class="docutils literal notranslate"><span class="pre">setZoom()</span></code> method can be placed in the INIT section of your
+OpMode,</p>
+<ul class="simple">
+<li><p>immediately after the call to the <code class="docutils literal notranslate"><span class="pre">initTfod()</span></code> method, or</p></li>
+<li><p>as the very last command inside the <code class="docutils literal notranslate"><span class="pre">initTfod()</span></code> method.</p></li>
+</ul>
+<p>This method is <strong>not</strong> part of the TFOD Processor Builder pattern, so
+the Zoom factor can be set to other values during the OpMode, if
+desired.</p>
+<p>The “zoomed” region can be observed in the DS preview (Camera Stream)
+and the RC preview (LiveView), surrounded by a greyed-out area that is
+<strong>not evaluated</strong> by the TFOD Processor.</p>
+</section>
+<section id="other-adjustments">
+<h2>Other Adjustments<a class="headerlink" href="#other-adjustments" title="Permalink to this heading"></a></h2>
+<p>This Sample OpMode contains another adjustment, commented out:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set confidence threshold for TFOD recognitions, at any time.</span>
+<span class="n">tfod</span><span class="p">.</span><span class="na">setMinResultConfidence</span><span class="p">(</span><span class="mf">0.75f</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The SDK uses a default <strong>minimum confidence</strong> level of 75%. This means
+the TensorFlow Processor needs a confidence level of 75% or higher, to
+consider an object as “recognized” in its field of view.</p>
+<p>You can see the object name and actual confidence (as a <strong>decimal</strong>,
+e.g. 0.96) near the Bounding Box, in the Driver Station preview (Camera
+Stream) and Robot Controller preview (Liveview).</p>
+<p>Adjust this parameter to a higher value if you want the processor to be
+more selective in identifying an object.</p>
+<hr class="docutils" />
+<p>Another option is to define, or clip, a <strong>custom area for TFOD
+evaluation</strong>, unlike <code class="docutils literal notranslate"><span class="pre">setZoom</span></code> which is always centered.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set the number of pixels to obscure on the left, top,</span>
+<span class="c1">// right, and bottom edges of each image passed to the</span>
+<span class="c1">// TensorFlow object detector. The size of the images are not</span>
+<span class="c1">// changed, but the pixels in the margins are colored black.</span>
+<span class="n">tfod</span><span class="p">.</span><span class="na">setClippingMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Adjust the four margins as desired, in units of pixels.</p>
+<p>These method calls can be placed in the INIT section of your OpMode,</p>
+<ul class="simple">
+<li><p>immediately after the call to the <code class="docutils literal notranslate"><span class="pre">initTfod()</span></code> method, or</p></li>
+<li><p>as the very last commands inside the <code class="docutils literal notranslate"><span class="pre">initTfod()</span></code> method.</p></li>
+</ul>
+<p>As with <code class="docutils literal notranslate"><span class="pre">setProcessorEnabled()</span></code> and <code class="docutils literal notranslate"><span class="pre">setZoom()</span></code>, these methods are
+<strong>not</strong> part of the Processor or VisionPortal Builder patterns, so they
+can be set to other values during the OpMode, if desired.</p>
+</section>
+<section id="modifying-the-sample">
+<h2>Modifying the Sample<a class="headerlink" href="#modifying-the-sample" title="Permalink to this heading"></a></h2>
+<p>In this Sample OpMode, the main loop ends only when the DS STOP button
+is touched. For CENTERSTAGE competition, teams should <strong>modify this
+code</strong> in at least two ways:</p>
+<ul class="simple">
+<li><p>for a significant recognition, take action or store key information –
+inside the <code class="docutils literal notranslate"><span class="pre">for()</span> <span class="pre">loop</span></code></p></li>
+<li><p>end the main loop based on your criteria, to continue the OpMode</p></li>
+</ul>
+<p>As an example, you might set a Boolean variable <code class="docutils literal notranslate"><span class="pre">isPixelDetected</span></code> (or
+<code class="docutils literal notranslate"><span class="pre">isPropDetected</span></code>) to <code class="docutils literal notranslate"><span class="pre">true</span></code>, if a significant recognition has
+occurred.</p>
+<p>You might also evaluate and store which randomized Spike Mark (red or
+blue tape stripe) holds the white Pixel or Team Prop.</p>
+<p>Regarding the main loop, it could end after the camera views all three
+Spike Marks, or after your code provides a high-confidence result. If
+the camera’s view includes more than one Spike Mark position, perhaps
+the Pixel/Prop’s <strong>Bounding Box</strong> size and location could be useful.
+Teams should consider how long to seek an acceptable recognition, and
+what to do otherwise.</p>
+<p>In any case, the OpMode should exit the main loop and continue running,
+using any stored information.</p>
+<p>Best of luck this season!</p>
+<hr class="docutils" />
+<p>Questions, comments and corrections to <a class="reference external" href="mailto:westsiderobotics&#37;&#52;&#48;verizon&#46;net">westsiderobotics<span>&#64;</span>verizon<span>&#46;</span>net</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../java_tfod_opmode/java-tfod-opmode.html" class="btn btn-neutral float-left" title="Java Easy Sample OpMode for TFOD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../vision_overview/vision-overview.html" class="btn btn-neutral float-right" title="Computer Vision Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo" style="display: flex">
+  
+    <div id="container" style="width: 50%; white-space:nowrap;">
+
+      <div>
+        &#169; 2025 <i>FIRST</i>
+      </div>
+
+      <div>
+        <p><a href="../../../tos/tos.html">Terms of Service</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/privacy-policy">Privacy Policy</a></p>
+      </div>
+      <div>
+        <p><a class="external" href="https://www.firstinspires.org/programs/youth-protection-program">Report an Incident</a></p>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <div align="right" style='flex-grow:1; text-align: right'>
+      Season Presenting Sponsor
+      <figure>
+        <img src="../../../_static/RTX.png" alt="RTX" class="invert-img" width="200" align="right"/>
+      </figure>
+    </div>
+  </div>
+<!--
+  <div> 
+  </div>
+  -->
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>
