@@ -35,7 +35,7 @@ Control System Supporting Documentation
 -  :doc:`Connecting a Laptop to a Program & Manage Wi-Fi Network <shared/program_and_manage_network/Connecting-a-Laptop-to-the-Program-&-Manage-Network>`
 -  :doc:`Installing a Javascript Enabled Browser <shared/installing_javascript_browser/Installing-a-Javascript-Enabled-Browser>`
 -  :doc:`Managing a Control Hub <shared/managing_control_hub/Managing-a-Control-Hub>`
--  :doc:`Managing a Smartphone Driver Station (DS) <shared/managing_smartphone_ds/Managing-a-Smartphone-Driver-Station>`
+-  :doc:`Managing a Driver Hub <shared/managing_smartphone_ds/Managing-a-Smartphone-Driver-Station>`
 -  :doc:`Managing a Smartphone Robot Controller (RC) <shared/managing_smartphone_rc/Managing-a-Smartphone-Robot-Controller>`
 
 .. toctree::
@@ -69,6 +69,7 @@ Topics for programming with AprilTags
    Understanding AprilTag Values <../apriltag/understanding_apriltag_detection_values/understanding-apriltag-detection-values>
    AprilTag Localization <../apriltag/vision_portal/apriltag_localization/apriltag-localization>
    AprilTag Test Images <../apriltag/opmode_test_images/opmode-test-images>
+   ../apriltag/apriltag_tips/decode_apriltag/decode-apriltag 
 
 TensorFlow Programming
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -115,6 +116,7 @@ Learn more about using a simple webcam or smartphone camera to perform Color Pro
    ../color_processing/color-locator-discover/color-locator-discover
    ../color_processing/color-locator-explore/color-locator-explore
    ../color_processing/color-locator-challenge/color-locator-challenge
+   ../color_processing/color-locator-round-blobs/color-locator-round-blobs
    ../color_processing/color-spaces/color-spaces
 
 Advanced Topics
